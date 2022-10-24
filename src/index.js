@@ -10,6 +10,9 @@ const Global = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+html {
+    font-size: 16px;
+  }
 `;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
