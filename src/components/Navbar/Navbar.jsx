@@ -4,9 +4,9 @@ import { NavbarWrapper, NavLink } from './NavbarStyles';
 const Navbar = () => {
     return (
         <NavbarWrapper>
-            <NavLink>Home(FC)</NavLink>
-            <NavLink>Home(CC)</NavLink>
-            <NavLink>Settings</NavLink>
+            <NavLink to={'/'}>Home(FC)</NavLink>
+            <NavLink to={'/home-cc'}>Home(CC)</NavLink>
+            <NavLink to='/settings'>Settings</NavLink>
         </NavbarWrapper>
     );
 };

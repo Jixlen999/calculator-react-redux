@@ -1,15 +1,15 @@
 import React from 'react';
 import HistoryFC from '@components/History/HistoryFC';
 import CalculatorFC from '@components/Calculator/CalculatorFC';
-import { MainWrapper } from './MainStyles';
+import { HomeWrapper } from './HomeStyles';
 
-const Main = () => {
+const HomeFC = () => {
     return (
-        <MainWrapper>
+        <HomeWrapper>
             <CalculatorFC />
             <HistoryFC />
-        </MainWrapper>
+        </HomeWrapper>
     );
 };
 
-export default Main;
+export default HomeFC;

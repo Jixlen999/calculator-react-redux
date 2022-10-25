@@ -1,19 +1,22 @@
-import styled from 'styled-components';
-import Header from '@components/Header/Header';
-import Main from '@components/Main/Main';
-
-const AppWrapper = styled.div`
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-`;
+import { Routes, Route } from 'react-router-dom';
+import HomeFC from '@pages/HomePage/HomeFC';
+import HomeCC from '@pages/HomePage/HomeCC';
+import Settings from '@pages/SettingsPage/Settings';
+import ErrorPage from '@pages/ErrorPage/ErrorPage';
+import Layout from '@components/Layout/Layout';
+import { AppWrapper } from './AppStyles';
 
 function App() {
     return (
         <AppWrapper>
-            <Header />
-            <Main />
+            <Routes>
+                <Route path='/' element={<Layout />}>
+                    <Route index element={<HomeFC />} />
+                    <Route path='/home-cc' element={<HomeCC />} />
+                    <Route path='/settings' element={<Settings />} />
+                    <Route path='*' element={<ErrorPage />} />
+                </Route>
+            </Routes>
         </AppWrapper>
     );
 }

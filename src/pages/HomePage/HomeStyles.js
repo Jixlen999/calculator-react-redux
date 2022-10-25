@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MainWrapper = styled.div`
+export const HomeWrapper = styled.div`
     display: flex;
     padding: 15px;
     width: 100%;
