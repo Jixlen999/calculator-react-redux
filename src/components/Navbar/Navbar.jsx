@@ -1,21 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const NavbarWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-`;
-
-const NavLink = styled.a`
-    cursor: pointer;
-    color: #afafaf;
-    &:hover {
-        color: #ececec;
-        border-bottom: 1.5px solid white;
-    }
-`;
+import { NavbarWrapper, NavLink } from './NavbarStyles';
 
 const Navbar = () => {
     return (

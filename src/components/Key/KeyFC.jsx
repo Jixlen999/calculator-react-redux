@@ -1,24 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const KeyWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 500;
-    border-radius: 10px;
-    border: 1px solid #717171;
-    background-color: #f2f2f2;
-    cursor: pointer;
-    &:hover {
-        background-color: #e2e2e2;
-    }
-`;
+import PropTypes from 'prop-types';
+import { KeyWrapper } from './KeyStyles';
 
 const KeyFC = ({ element }) => {
     return <KeyWrapper>{element}</KeyWrapper>;
+};
+
+KeyFC.propTypes = {
+    element: PropTypes.string.isRequired,
 };
 
 export default KeyFC;

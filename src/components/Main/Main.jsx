@@ -1,15 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import HistoryFC from '@components/History/HistoryFC';
-import CalculatorFC from '../Calculator/CalculatorFC';
-
-const MainWrapper = styled.div`
-    display: flex;
-    padding: 15px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-`;
+import CalculatorFC from '@components/Calculator/CalculatorFC';
+import { MainWrapper } from './MainStyles';
 
 const Main = () => {
     return (
