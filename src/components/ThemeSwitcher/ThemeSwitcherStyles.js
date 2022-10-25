@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { DarkTheme } from '@constants/ThemeConstants';
 
 export const SwitcherWrapper = styled.div`
     margin-bottom: 20px;
@@ -8,17 +7,17 @@ export const SwitcherWrapper = styled.div`
 export const Select = styled.select`
     width: 20%;
     height: 50px;
-    background-color: ${DarkTheme.btnBackground};
-    color: ${DarkTheme.mainTextColor};
+    background-color: ${({ theme }) => theme.btnBackground};
+    color: ${({ theme }) => theme.mainTextColor};
     text-align: center;
     font-size: 2rem;
     border-radius: 5px;
-    border: 2px solid ${DarkTheme.btnBorder};
+    border: 2px solid ${({ theme }) => theme.btnBorder};
     cursor: pointer;
 `;
 
 export const Text = styled.p`
-    color: ${DarkTheme.mainTextColor};
+    color: ${({ theme }) => theme.mainTextColor};
     font-size: 1.2rem;
     cursor: pointer;
 `;

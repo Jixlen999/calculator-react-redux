@@ -1,4 +1,4 @@
-export const DarkTheme = {
+const DarkTheme = {
     btnBackground: '#766993',
     headerColor: '#201c25',
     btnBorder: '#573880',
@@ -7,11 +7,16 @@ export const DarkTheme = {
     mainBackground: '#3E3649',
 };
 
-export const LightTheme = {
-    btnBackground: '#F3D9D9',
-    headerColor: '#F8E173',
+const LightTheme = {
+    btnBackground: '#FFd7b5',
+    headerColor: '#E25817',
     btnBorder: '#FC929B',
     btnHover: '#FDC4D2',
     mainTextColor: '#FA5F66',
     mainBackground: '#FCF7F6',
+};
+
+export const theme = {
+    DarkTheme,
+    LightTheme,
 };

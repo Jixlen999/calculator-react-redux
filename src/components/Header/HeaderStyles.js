@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { DarkTheme, LightTheme } from '@constants/ThemeConstants';
 
 export const HeaderWrapper = styled.div`
     height: 10%;
     width: 100%;
     padding: 15px;
-    background-color: ${DarkTheme.headerColor};
+    background-color: ${({ theme }) => theme.headerColor};
     display: flex;
     justify-content: space-between;
     align-items: center;
