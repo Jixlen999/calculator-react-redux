@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Header from '@components/Header/Header';
-import Calculator from '@components/Calculator/Calculator';
+import Main from '@components/Main/Main';
 
 const AppWrapper = styled.div`
     width: 100vw;
@@ -13,7 +13,7 @@ function App() {
     return (
         <AppWrapper>
             <Header />
-            <Calculator />
+            <Main />
         </AppWrapper>
     );
 }

@@ -9,6 +9,7 @@ const Global = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 html {
     font-size: 16px;
