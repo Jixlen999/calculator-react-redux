@@ -5,7 +5,7 @@ export const SwitcherWrapper = styled.div`
 `;
 
 export const Select = styled.select`
-    width: 20%;
+    width: 10em;
     height: 50px;
     background-color: ${({ theme }) => theme.btnBackground};
     color: ${({ theme }) => theme.mainTextColor};

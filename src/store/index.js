@@ -1,4 +1,9 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
+import { historyReducer } from './reducers/HistoryReducer';
 import { themeReducer } from './reducers/ThemeReducer';
 
-export const store = createStore(themeReducer);
+const rootReducer = combineReducers({
+    theme: themeReducer,
+    history: historyReducer,
+});
+export const store = createStore(rootReducer);

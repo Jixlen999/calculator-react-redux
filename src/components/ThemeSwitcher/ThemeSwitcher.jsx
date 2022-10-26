@@ -5,7 +5,7 @@ import { changeTheme } from '@store/actions/Actions';
 
 const ThemeSwitcher = () => {
     const dispatch = useDispatch();
-    const actualTheme = useSelector((store) => store);
+    const actualTheme = useSelector((store) => store.theme);
 
     const changeSelect = (e) => {
         dispatch(changeTheme(e.target.value));

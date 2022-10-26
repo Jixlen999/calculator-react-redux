@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const DeleteBtn = styled.div`
-    width: 20%;
+    width: 10em;
     height: 50px;
     text-align: center;
     font-size: 2rem;

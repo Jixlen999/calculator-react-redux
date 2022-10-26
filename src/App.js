@@ -12,7 +12,7 @@ import { AppWrapper } from './AppStyles';
 import { theme } from '@constants/ThemeConstants';
 
 function App() {
-    const storeTheme = useSelector((state) => state);
+    const storeTheme = useSelector((state) => state.theme);
     const themeValue =
         storeTheme === 'dark' ? theme.DarkTheme : theme.LightTheme;
 

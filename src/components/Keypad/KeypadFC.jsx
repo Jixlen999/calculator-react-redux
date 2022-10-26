@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import KeyFC from '@components/Key/KeyFC';
 import { KeypadWrapper } from './KeypadStyles';
 
