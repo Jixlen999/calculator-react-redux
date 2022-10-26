@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { DeleteBtn } from './DeleteBtnStyles';
 
 const DeleteHistoryBtn = () => {
-    return <DeleteBtn>Delete History</DeleteBtn>;
+    return <DeleteBtn onClick={() => {}}>Delete History</DeleteBtn>;
 };
 
 export default DeleteHistoryBtn;
