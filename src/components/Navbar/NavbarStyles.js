@@ -11,7 +11,7 @@ export const NavbarWrapper = styled.div`
 export const NavLink = styled(Link)`
     cursor: pointer;
     text-decoration: none;
-    color: #afafaf;
+    color: ${({ theme }) => theme.navLinkColor};
     &:hover {
         color: #ececec;
         border-bottom: 1.5px solid white;

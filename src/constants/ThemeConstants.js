@@ -5,6 +5,7 @@ const DarkTheme = {
     btnHover: '#635579',
     mainTextColor: '#ececec',
     mainBackground: '#3E3649',
+    navLinkColor: '#afafaf',
 };
 
 const LightTheme = {
@@ -14,6 +15,7 @@ const LightTheme = {
     btnHover: '#FDC4D2',
     mainTextColor: '#FA5F66',
     mainBackground: '#FCF7F6',
+    navLinkColor: '#FFD396',
 };
 
 export const theme = {
