@@ -6,7 +6,7 @@ const DisplayFC = () => {
     const screenValue = useSelector((state) => state.calculator.num);
     return (
         <DisplayWrapper>
-            <DisplayText>{screenValue}</DisplayText>
+            <DisplayText>{screenValue === '' ? 0 : screenValue}</DisplayText>
         </DisplayWrapper>
     );
 };
