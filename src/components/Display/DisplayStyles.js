@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const DisplayWrapper = styled.div`
-    height: 13%;
+    min-height: 13%;
     padding: 15px;
     text-align: right;
     border-bottom: 2px solid #717171;

@@ -15,7 +15,6 @@ export const calculatorReducer = (state = initialState, action) => {
         case LOAD_BUTTON:
             return {
                 ...state,
-                // ...action.payload,
                 num: state.num.concat(action.payload),
             };
         case LOAD_C:
