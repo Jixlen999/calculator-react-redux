@@ -31,7 +31,7 @@ const KeyFC = ({ element }) => {
             // надо будет его разбить по пробелами, чтобы было удобно различать числа(даже десятичные) и знаки
         } else {
             if (operators.includes(el)) {
-                if (screenValue === '') {
+                if (screenValue === '' && el !== ('(' || ')')) {
                     //если пустая - добавить 0
                     dispatch(loadButton(0));
                 } else if (screenValue[screenValue.length - 1] === ' ') {
