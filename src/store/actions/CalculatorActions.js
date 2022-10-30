@@ -21,3 +21,9 @@ export const loadCE = (num) => {
         type: LOAD_CE,
     };
 };
+export const loadAnswer = (answer) => {
+    return {
+        type: LOAD_ANSWER,
+        payload: answer,
+    };
+};

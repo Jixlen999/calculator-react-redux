@@ -4,9 +4,17 @@ import { DisplayWrapper, DisplayText } from './DisplayStyles';
 
 const DisplayFC = () => {
     const screenValue = useSelector((state) => state.calculator.num);
+    const calcResult = useSelector((state) => state.calculator.answer);
+
     return (
         <DisplayWrapper>
-            <DisplayText>{screenValue === '' ? 0 : screenValue}</DisplayText>
+            <DisplayText>
+                {calcResult === ''
+                    ? screenValue === ''
+                        ? 0
+                        : screenValue
+                    : calcResult}
+            </DisplayText>
         </DisplayWrapper>
     );
 };

@@ -29,6 +29,11 @@ export const calculatorReducer = (state = initialState, action) => {
                 num: state.num.slice(0, -1),
                 answer: '',
             };
+        case LOAD_ANSWER:
+            return {
+                ...state,
+                answer: action.payload,
+            };
         default:
             return state;
     }
