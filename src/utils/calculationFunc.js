@@ -1,3 +1,80 @@
+function add(x, y) {
+    return x + y;
+}
+function sub(x, y) {
+    return x - y;
+}
+function mul(x, y) {
+    return x * y;
+}
+function div(x, y) {
+    return x / y;
+}
+
+const Command = function (execute, value1, value2) {
+    this.execute = execute;
+    this.value1 = value1;
+    this.value2 = value2;
+};
+const AddCommand = function (value1, value2) {
+    return new Command(add, value1, value2);
+};
+
+const SubCommand = function (value1, value2) {
+    return new Command(sub, value1, value2);
+};
+
+const MulCommand = function (value1, value2) {
+    return new Command(mul, value1, value2);
+};
+
+const DivCommand = function (value1, value2) {
+    return new Command(div, value1, value2);
+};
+
+const Calculator = function () {
+    let result = 0;
+
+    return {
+        execute: function (command) {
+            result = command.execute(command.value1, command.value2);
+        },
+
+        getResult: function () {
+            return result;
+        },
+    };
+};
+
+function calculate(op, a, b) {
+    const calculator = new Calculator();
+    a = Number(a);
+    b = Number(b);
+    // a - предпоследнее число
+    // b - последнее число
+    // поэтому меняем местами, чтобы первое, поделить на второе
+    switch (op) {
+        case '+':
+            calculator.execute(new AddCommand(a, b));
+            return calculator.getResult();
+        // return b + a;
+        case '-':
+            calculator.execute(new SubCommand(b, a));
+            return calculator.getResult();
+        // return b - a;
+        case '/':
+            calculator.execute(new DivCommand(b, a));
+            return calculator.getResult();
+        // return b / a;
+        case '*':
+            calculator.execute(new MulCommand(a, b));
+            return calculator.getResult();
+        // return b * a;
+        default:
+            return NaN;
+    }
+}
+
 export default function calculateExpression(expr) {
     let nums = [];
     let ops = [];
@@ -7,26 +84,6 @@ export default function calculateExpression(expr) {
     operators['*'] = 1;
     operators['/'] = 1;
     const brackets = ['(', ')'];
-
-    function calculate(op, a, b) {
-        a = Number(a);
-        b = Number(b);
-        // a - предпоследнее число
-        // b - последнее число
-        // поэтому меняем местами, чтобы первое, поделить на второе
-        switch (op) {
-            case '+':
-                return b + a;
-            case '-':
-                return b - a;
-            case '/':
-                return b / a;
-            case '*':
-                return b * a;
-            default:
-                return NaN;
-        }
-    }
 
     try {
         for (let i = 0; i < expr.length; ++i) {

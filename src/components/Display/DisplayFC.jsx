@@ -5,7 +5,6 @@ import { DisplayWrapper, DisplayText } from './DisplayStyles';
 const DisplayFC = () => {
     const screenValue = useSelector((state) => state.calculator.num);
     const calcResult = useSelector((state) => state.calculator.answer);
-
     return (
         <DisplayWrapper>
             <DisplayText>
@@ -19,4 +18,4 @@ const DisplayFC = () => {
     );
 };
 
-export default DisplayFC;
+export default React.memo(DisplayFC);
