@@ -22,6 +22,7 @@ export default function clickHandler(el, dispatch, screenValue) {
                 //если еще ничего не было введено, но уже попытались ввести
                 //арифм операцию - добавить 0 в качестве первого символа
                 dispatch(loadButton(0));
+                dispatch(loadButton(` ${el} `));
             } else if (screenValue[screenValue.length - 1] === ' ') {
                 dispatch(loadButton(`${el} `));
             } else {
