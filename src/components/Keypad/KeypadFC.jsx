@@ -1,36 +1,47 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import KeyFC from '@components/Key/KeyFC';
 import { KeypadWrapper } from './KeypadStyles';
 
-const keys = [
-    'C',
-    '7',
-    '8',
-    '9',
-    '*',
-    '-',
-    '4',
-    '5',
-    '6',
-    '/',
-    '+',
-    '1',
-    '2',
-    '3',
-    '=',
-    '.',
-    '(',
-    '0',
-    ')',
-    'CE',
-];
+const keys1 = ['%', '9', '8', '('];
+const keys2 = ['*', '7', '6', ')'];
+const keys3 = ['/', '5', '4', '±'];
+const keys4 = ['+', '3', '2', '.'];
+const keys5 = ['-', '1', '0', '='];
+const keys6 = ['C', 'CE'];
+const keys = [keys1, keys2, keys3, keys4, keys5];
 
 const KeypadFC = () => {
     return (
         <KeypadWrapper>
             {keys.map((element) => {
-                return <KeyFC key={element} element={element} />;
+                return (
+                    <div
+                        style={{
+                            display: 'flex',
+                            gap: '10%',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                        }}
+                    >
+                        {element.map((key) => {
+                            return <KeyFC key={key} element={key} />;
+                        })}
+                    </div>
+                );
             })}
+
+            <div
+                style={{
+                    display: 'flex',
+                    gap: '10%',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                }}
+            >
+                {keys6.map((element) => {
+                    return <KeyFC key={element} element={element} />;
+                })}
+            </div>
         </KeypadWrapper>
     );
 };

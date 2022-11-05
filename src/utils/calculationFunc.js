@@ -32,6 +32,10 @@ const DivCommand = function (value1, value2) {
     return new Command(div, value1, value2);
 };
 
+const RemainderCommand = function (value1, value2) {
+    return new Command(div, value1, value2);
+};
+
 const Calculator = function () {
     let result = 0;
 
@@ -57,19 +61,18 @@ function calculate(op, a, b) {
         case '+':
             calculator.execute(new AddCommand(a, b));
             return calculator.getResult();
-        // return b + a;
         case '-':
             calculator.execute(new SubCommand(b, a));
             return calculator.getResult();
-        // return b - a;
         case '/':
             calculator.execute(new DivCommand(b, a));
             return calculator.getResult();
-        // return b / a;
         case '*':
             calculator.execute(new MulCommand(a, b));
             return calculator.getResult();
-        // return b * a;
+        case '%':
+            calculator.execute(new RemainderCommand(b, a));
+            return calculator.getResult();
         default:
             return NaN;
     }
@@ -83,6 +86,7 @@ export default function calculateExpression(expr) {
     operators['-'] = 0;
     operators['*'] = 1;
     operators['/'] = 1;
+    operators['%'] = 1;
     const brackets = ['(', ')'];
 
     try {

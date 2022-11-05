@@ -8,7 +8,7 @@ import calculateExpression from './calculationFunc';
 import normalizeExpression from './normalizeFunc';
 
 export default function clickHandler(el, dispatch, screenValue) {
-    const operators = ['+', '-', '/', '*', '(', ')'];
+    const operators = ['+', '-', '/', '*', '(', ')', '%'];
     if (el === 'CE') {
         dispatch(loadCE());
     } else if (el === 'C') {

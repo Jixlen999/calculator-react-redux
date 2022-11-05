@@ -4,6 +4,8 @@ export const KeyWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 15vw;
+    height: 10vh;
     font-size: 2rem;
     color: ${({ theme }) => theme.mainTextColor};
     text-align: center;
