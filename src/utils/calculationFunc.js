@@ -10,6 +10,9 @@ function mul(x, y) {
 function div(x, y) {
     return x / y;
 }
+function remainder(x, y) {
+    return x % y;
+}
 
 const Command = function (execute, value1, value2) {
     this.execute = execute;
@@ -33,7 +36,7 @@ const DivCommand = function (value1, value2) {
 };
 
 const RemainderCommand = function (value1, value2) {
-    return new Command(div, value1, value2);
+    return new Command(remainder, value1, value2);
 };
 
 const Calculator = function () {
@@ -133,18 +136,25 @@ export default function calculateExpression(expr) {
                     } else {
                         //подсчеты внутри скобок
                         if (expr[i] === ')') {
-                            let j = ops.length - 1;
-                            while (ops[j] !== '(') {
-                                let calculatedVal = calculate(
-                                    ops[j],
-                                    nums.pop(),
-                                    nums.pop(),
-                                );
-                                nums.push(calculatedVal);
+                            if (
+                                expr.indexOf('(') !== -1 &&
+                                expr.indexOf('(') < i
+                            ) {
+                                let j = ops.length - 1;
+                                while (ops[j] !== '(') {
+                                    let calculatedVal = calculate(
+                                        ops[j],
+                                        nums.pop(),
+                                        nums.pop(),
+                                    );
+                                    nums.push(calculatedVal);
+                                    ops.pop();
+                                    --j;
+                                }
                                 ops.pop();
-                                --j;
+                            } else {
+                                return 'Invalid input';
                             }
-                            ops.pop();
                         } else {
                             ops.push(expr[i]);
                         }
@@ -165,7 +175,14 @@ export default function calculateExpression(expr) {
             !Number.isNaN(nums[0]) &&
             Number.isFinite(nums[0])
         ) {
-            return nums[0];
+            const digitsAfterComma = nums[0].toString().includes('.')
+                ? nums[0].toString().split('.').pop().length
+                : 0;
+            if (digitsAfterComma > 3) {
+                return nums[0].toFixed(3);
+            } else {
+                return nums[0];
+            }
         } else {
             return 'Invalid input';
         }

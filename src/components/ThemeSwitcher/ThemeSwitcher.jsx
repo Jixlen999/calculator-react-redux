@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select, SwitcherWrapper, Text } from './ThemeSwitcherStyles';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeTheme } from '@store/actions/Actions';
+import { changeTheme } from '@store/actions/ThemeActions';
 
 const ThemeSwitcher = () => {
     const dispatch = useDispatch();

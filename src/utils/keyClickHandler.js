@@ -4,6 +4,7 @@ import {
     loadC,
     loadAnswer,
 } from '@store/actions/CalculatorActions';
+import { addToHistory } from '../store/actions/CalculatorActions';
 import calculateExpression from './calculationFunc';
 import normalizeExpression from './normalizeFunc';
 
@@ -16,6 +17,10 @@ export default function clickHandler(el, dispatch, screenValue) {
     } else if (el === '=') {
         const result = calculateExpression(normalizeExpression(screenValue));
         dispatch(loadAnswer(result));
+        //Если результат не валидный, то он в историю не добавляется
+        if (result !== 'Invalid input') {
+            dispatch(addToHistory(screenValue, `${screenValue} = ${result}`));
+        }
     } else {
         if (operators.includes(el)) {
             if (screenValue === '' && el !== ('(' || ')')) {

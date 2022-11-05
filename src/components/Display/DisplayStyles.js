@@ -10,3 +10,4 @@ export const DisplayText = styled.p`
     font-size: 2rem;
     font-weight: 500;
 `;
+export const ExpressionText = styled.p``;
