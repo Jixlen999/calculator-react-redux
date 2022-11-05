@@ -8,9 +8,10 @@ import { useDispatch, useSelector } from 'react-redux';
 const KeyFC = ({ element }) => {
     const dispatch = useDispatch();
     const screenValue = useSelector((state) => state.calculator.num);
+    const answer = useSelector((state) => state.calculator.answer);
     return (
         <KeyWrapper
-            onClick={() => clickHandler(element, dispatch, screenValue)}
+            onClick={() => clickHandler(element, dispatch, screenValue, answer)}
         >
             {element}
         </KeyWrapper>
