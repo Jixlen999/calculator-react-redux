@@ -4,3 +4,4 @@ export const LOAD_BUTTON = 'LOAD_BUTTON';
 export const LOAD_C = 'LOAD_C';
 export const LOAD_CE = 'LOAD_CE';
 export const LOAD_ANSWER = 'LOAD_ANSWER';
+export const CLEAR_HISTORY = 'CLEAR_HISTORY';

@@ -4,6 +4,7 @@ import {
     LOAD_C,
     LOAD_CE,
     ADD_TO_HISTORY,
+    CLEAR_HISTORY,
 } from '@constants/ActionsConstants';
 
 export const loadButton = (num) => {
@@ -34,5 +35,11 @@ export const addToHistory = (lastExpression, expressionWithResult) => {
         type: ADD_TO_HISTORY,
         lastExpression,
         expressionWithResult,
+    };
+};
+
+export const clearHistory = () => {
+    return {
+        type: CLEAR_HISTORY,
     };
 };
