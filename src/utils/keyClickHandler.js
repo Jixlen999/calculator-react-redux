@@ -17,11 +17,17 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
     } else if (el === 'C') {
         dispatch(loadC());
     } else if (el === '=') {
-        const result = calculateExpression(normalizeExpression(screenValue));
-        dispatch(loadAnswer(result));
-        //Если результат не валидный, то он в историю не добавляется
-        if (result !== 'Invalid input') {
-            dispatch(addToHistory(screenValue, `${screenValue} = ${result}`));
+        if (answer === '') {
+            const result = calculateExpression(
+                normalizeExpression(screenValue),
+            );
+            dispatch(loadAnswer(result));
+            //Если результат не валидный, то он в историю не добавляется
+            if (result !== 'Invalid input') {
+                dispatch(
+                    addToHistory(screenValue, `${screenValue} = ${result}`),
+                );
+            }
         }
     } else {
         const prevAnswer = answer;
@@ -47,15 +53,26 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
                 dispatch(loadButton(` ${el} `)); //каждый знак (если за ним следует число) отделять пробелами
             }
         } else {
-            if (
-                el === '.' &&
-                (screenValue[screenValue.length - 1] === ' ' ||
-                    screenValue.length === 0)
-            ) {
-                console.log(screenValue[screenValue.length - 1]);
-                dispatch(loadButton(`0${el}`));
+            if (el === '.') {
+                if (
+                    screenValue[screenValue.length - 1] === ' ' ||
+                    screenValue.length === 0
+                ) {
+                    dispatch(loadButton(`0${el}`));
+                } else if (prevAnswer) {
+                    dispatch(loadButton(`0${el}`));
+                } else {
+                    dispatch(loadButton(el));
+                }
             } else {
-                dispatch(loadButton(el));
+                if (
+                    !(
+                        screenValue[screenValue.length - 1] === '0' &&
+                        screenValue[screenValue.length - 3] === '/'
+                    )
+                ) {
+                    dispatch(loadButton(el));
+                }
             }
         }
     }

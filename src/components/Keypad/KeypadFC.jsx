@@ -22,6 +22,7 @@ const KeypadFC = () => {
                             justifyContent: 'space-between',
                             alignItems: 'center',
                         }}
+                        key={element}
                     >
                         {element.map((key) => {
                             return <KeyFC key={key} element={key} />;
