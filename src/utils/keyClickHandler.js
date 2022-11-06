@@ -145,9 +145,7 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
             } else if (el === '.') {
                 //Обработка на случай, если последний эл-т - оператор, скобка или точка
                 if (
-                    !operatorsAndBrackets.includes(
-                        screenValue[screenValue.length - 2],
-                    ) &&
+                    screenValue[screenValue.length - 2] !== ')' &&
                     screenValue[screenValue.length - 1] !== '.'
                 ) {
                     if (
