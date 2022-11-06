@@ -28,4 +28,4 @@ const DisplayFC = () => {
     );
 };
 
-export default React.memo(DisplayFC);
+export default DisplayFC;
