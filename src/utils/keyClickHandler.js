@@ -23,7 +23,10 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
             );
             dispatch(loadAnswer(result));
             //Если результат не валидный, то он в историю не добавляется
-            if (result !== 'Invalid input') {
+            if (
+                result !== 'Invalid input' &&
+                result !== 'Division by zero error'
+            ) {
                 dispatch(
                     addToHistory(screenValue, `${screenValue} = ${result}`),
                 );
@@ -36,7 +39,10 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
         }
         if (operators.includes(el)) {
             if (prevAnswer !== '') {
-                if (prevAnswer !== 'Invalid input') {
+                if (
+                    prevAnswer !== 'Invalid input' &&
+                    prevAnswer !== 'Division by zero error'
+                ) {
                     dispatch(loadButton(prevAnswer));
                 } else {
                     dispatch(loadButton(0));
@@ -65,14 +71,7 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
                     dispatch(loadButton(el));
                 }
             } else {
-                if (
-                    !(
-                        screenValue[screenValue.length - 1] === '0' &&
-                        screenValue[screenValue.length - 3] === '/'
-                    )
-                ) {
-                    dispatch(loadButton(el));
-                }
+                dispatch(loadButton(el));
             }
         }
     }

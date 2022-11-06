@@ -169,6 +169,9 @@ export default function calculateExpression(expr) {
             ops.pop();
         }
         //проверки на валидность ввода, деление на 0
+        if (nums[0] === Infinity || nums[0] === -Infinity) {
+            return 'Division by zero error';
+        }
         if (
             nums.length === 1 &&
             ops.length === 0 &&

@@ -8,6 +8,7 @@ import {
 let initialState = {
     num: '',
     answer: '',
+    isDividedByZero: false,
 };
 
 export const calculatorReducer = (state = initialState, action) => {
@@ -18,11 +19,7 @@ export const calculatorReducer = (state = initialState, action) => {
                 num: state.num.concat(action.payload),
             };
         case LOAD_C:
-            return {
-                ...state,
-                num: '',
-                answer: '',
-            };
+            return initialState;
         case LOAD_CE:
             return {
                 ...state,
@@ -34,6 +31,7 @@ export const calculatorReducer = (state = initialState, action) => {
                 ...state,
                 answer: action.payload,
             };
+
         default:
             return state;
     }

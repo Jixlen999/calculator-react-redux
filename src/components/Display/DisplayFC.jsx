@@ -11,7 +11,9 @@ const DisplayFC = () => {
             <ExpressionText>
                 {/* Если результат еще не подсчитан, или его значение не
                 валидно, то последнее выражение над результатом не выводится */}
-                {calcResult === '' || calcResult === 'Invalid input'
+                {calcResult === '' ||
+                calcResult === 'Invalid input' ||
+                calcResult === 'Division by zero error'
                     ? ''
                     : lastExpression}
             </ExpressionText>
