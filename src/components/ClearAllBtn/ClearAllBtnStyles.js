@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const DeleteBtn = styled.div`
-    width: auto;
-    height: auto;
+    width: 10em;
+    height: 50px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     border-radius: 5px;
     border: 2px solid ${({ theme }) => theme.btnBorder};
     cursor: pointer;

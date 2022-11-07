@@ -9,7 +9,7 @@ const DeleteHistoryBtn = () => {
         dispatch(clearHistory());
     };
 
-    return <DeleteBtn onClick={clickHandler}>Delete History</DeleteBtn>;
+    return <DeleteBtn onClick={clickHandler}>Clear</DeleteBtn>;
 };
 
 export default DeleteHistoryBtn;

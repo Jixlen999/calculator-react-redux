@@ -12,7 +12,7 @@ export const HistoryBtn = styled.div`
     margin-left: 5px;
     font-size: 2rem;
     display: inline-block;
-    width: 10%;
+    width: 2.2rem;
     cursor: pointer;
     &:hover {
         font-size: 2.2rem;
