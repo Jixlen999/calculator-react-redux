@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
     HistoryWrapper,
     Heading,
@@ -25,6 +26,10 @@ const HistoryFC = ({ isShown }) => {
             </ExpressionsWrapper>
         </HistoryWrapper>
     );
+};
+
+HistoryFC.propTypes = {
+    isShown: PropTypes.bool.isRequired,
 };
 
 export default HistoryFC;

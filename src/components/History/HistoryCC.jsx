@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
     HistoryWrapper,
     Heading,
@@ -29,6 +30,10 @@ class HistoryCC extends React.Component {
         );
     }
 }
+
+HistoryCC.propTypes = {
+    isShown: PropTypes.bool.isRequired,
+};
 
 const mapStateToProps = (state) => ({ history: state.history.history });
 
