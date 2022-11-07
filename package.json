@@ -1,5 +1,6 @@
 {
     "name": "calculator-react-redux",
+    "homepage": "http//jixlen999.github.io/calculator-react-redux",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -19,6 +20,8 @@
     },
     "scripts": {
         "start": "react-app-rewired start",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
         "test:cypress": "cypress open",
@@ -40,6 +43,7 @@
         "cypress": "^10.11.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.2.1",
+        "gh-pages": "^4.0.0",
         "prettier": "^2.7.1",
         "react-app-rewire-alias": "^1.1.7",
         "react-app-rewired": "^2.2.1"
