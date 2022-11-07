@@ -135,6 +135,18 @@ export default function calculateExpression(expr) {
                         }
                     } else {
                         //подсчеты внутри скобок
+                        const countOpenBrackets = expr.filter(
+                            (el) => el === '(',
+                        ).length;
+                        const countClosedBrackets = expr.filter(
+                            (el) => el === ')',
+                        ).length;
+                        if (countOpenBrackets !== countClosedBrackets) {
+                            return 'Invalid input';
+                        }
+                        if (!checkValidBrackets(expr)) {
+                            return 'Invalid input';
+                        }
                         if (expr[i] === ')') {
                             if (
                                 expr.indexOf('(') !== -1 &&
@@ -192,4 +204,19 @@ export default function calculateExpression(expr) {
     } catch {
         return 'Invalid input';
     }
+}
+
+function checkValidBrackets(str) {
+    let stack = [];
+    let res = true;
+    // str = str.split("");
+    str = str.filter((el) => el === ')' || el === '(');
+    str.forEach((el) => {
+        if (el === '(') {
+            stack.push(el);
+        } else {
+            stack.length > 0 ? stack.pop() : (res = false);
+        }
+    });
+    return res;
 }

@@ -13,9 +13,23 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
     const operatorsOnly = ['+', '-', '/', '*', '%'];
     if (el === 'CE') {
         if (answer === '') {
-            //Удаление символа для операторов и скобок, чтобы дуалились и лишние пробелы
-            if (screenValue[screenValue.length - 1] === ' ') {
+            //Удаление символа для операторов и скобок, чтобы удалились и лишние пробелы
+            if (
+                screenValue[screenValue.length - 1] === ' ' &&
+                !operatorsAndBrackets.includes(
+                    screenValue[screenValue.length - 4],
+                )
+            ) {
                 for (let i = 0; i < 3; ++i) {
+                    dispatch(loadCE());
+                }
+            } else if (
+                screenValue[screenValue.length - 1] === ' ' &&
+                operatorsAndBrackets.includes(
+                    screenValue[screenValue.length - 4],
+                )
+            ) {
+                for (let i = 0; i < 2; ++i) {
                     dispatch(loadCE());
                 }
             } else {
@@ -26,6 +40,7 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
     } else if (el === 'C') {
         dispatch(loadC());
     } else if (el === '=') {
+        console.log(screenValue);
         if (answer === '') {
             const result = calculateExpression(
                 normalizeExpression(screenValue),
@@ -57,7 +72,11 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
             ) {
                 dispatch(loadCE());
                 dispatch(loadCE());
-            } else if (el === screenValue[screenValue.length - 2]) {
+            } else if (
+                el === screenValue[screenValue.length - 2] &&
+                el !== '(' &&
+                el !== ')'
+            ) {
                 return;
             }
             if (prevAnswer !== '') {
@@ -70,7 +89,7 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
                     dispatch(loadButton(0));
                 }
             }
-            if (screenValue === '' && el !== ('(' || ')')) {
+            if (screenValue === '' && el !== '(' && el !== ')') {
                 //если еще ничего не было введено, но уже попытались ввести
                 //арифм операцию - добавить 0 в качестве первого символа
                 dispatch(loadButton(0));

@@ -17,7 +17,7 @@ const DisplayFC = () => {
                     ? ''
                     : lastExpression}
             </ExpressionText>
-            <DisplayText>
+            <DisplayText data-cy='display'>
                 {calcResult === ''
                     ? screenValue === ''
                         ? 0
