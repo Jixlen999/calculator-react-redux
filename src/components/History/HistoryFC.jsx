@@ -18,7 +18,7 @@ const HistoryFC = ({ isShown }) => {
             }}
         >
             <Heading>History</Heading>
-            <ExpressionsWrapper>
+            <ExpressionsWrapper data-cy='history'>
                 {history.map((expr, index) => {
                     return (
                         <Expression key={`${expr}_${index}`}>{expr}</Expression>

@@ -40,7 +40,6 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
     } else if (el === 'C') {
         dispatch(loadC());
     } else if (el === '=') {
-        console.log(screenValue);
         if (answer === '') {
             const result = calculateExpression(
                 normalizeExpression(screenValue),
@@ -128,12 +127,6 @@ export default function clickHandler(el, dispatch, screenValue, answer) {
 }
 
 const negativePositiveChange = (screenValue, dispatch, prevAnswer) => {
-    // if (
-    //     prevAnswer !== '' &&
-    //     prevAnswer !== 'Invalid input' &&
-    //     prevAnswer !== 'Division by zero error'
-    // ) {
-    // } Не работает с ответом т е после получения ответа, не меняет у него знак, а делает какую-то дичь
     if (prevAnswer !== '') {
         if (
             prevAnswer !== 'Invalid input' &&

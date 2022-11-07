@@ -13,7 +13,7 @@ const ControlPanelFC = () => {
                 width: isShown ? '20%' : '2rem',
             }}
         >
-            <HistoryBtn onClick={handleClick}>
+            <HistoryBtn onClick={handleClick} data-cy='open-history'>
                 {isShown ? (
                     <i className='fa-solid fa-chevron-right'></i>
                 ) : (

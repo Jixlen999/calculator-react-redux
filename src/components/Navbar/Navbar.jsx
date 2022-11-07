@@ -4,11 +4,15 @@ import { NavbarWrapper, NavbarLink } from './NavbarStyles';
 const Navbar = () => {
     return (
         <NavbarWrapper>
-            <NavbarLink to='/' end>
+            <NavbarLink to='/' data-cy='homeFC' end>
                 Home(FC)
             </NavbarLink>
-            <NavbarLink to='/home-cc'>Home(CC)</NavbarLink>
-            <NavbarLink to='/settings'>Settings</NavbarLink>
+            <NavbarLink to='/home-cc' data-cy='homeCC'>
+                Home(CC)
+            </NavbarLink>
+            <NavbarLink to='/settings' data-cy='settings'>
+                Settings
+            </NavbarLink>
         </NavbarWrapper>
     );
 };

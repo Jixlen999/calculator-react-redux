@@ -9,6 +9,7 @@ class KeyCC extends React.Component {
         const { element, screenValue, answer, dispatch } = this.props;
         return (
             <KeyWrapper
+                data-cy={`key-${element}`}
                 onClick={() =>
                     clickHandler(element, dispatch, screenValue, answer)
                 }

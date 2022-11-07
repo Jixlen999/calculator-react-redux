@@ -21,7 +21,7 @@ class ControlPanelCC extends React.Component {
                     width: this.state.isShown ? '20%' : '2rem',
                 }}
             >
-                <HistoryBtn onClick={this.handleClick}>
+                <HistoryBtn onClick={this.handleClick} data-cy='open-history'>
                     {this.state.isShown ? (
                         <i className='fa-solid fa-chevron-right'></i>
                     ) : (

@@ -10,7 +10,11 @@ const ClearAllBtn = () => {
         dispatch(loadC());
     };
 
-    return <DeleteBtn onClick={clickHandler}>Clear All</DeleteBtn>;
+    return (
+        <DeleteBtn onClick={clickHandler} data-cy='clear-all'>
+            Clear All
+        </DeleteBtn>
+    );
 };
 
 export default ClearAllBtn;

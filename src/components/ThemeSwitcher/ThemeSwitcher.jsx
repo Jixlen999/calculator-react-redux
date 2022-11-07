@@ -13,7 +13,11 @@ const ThemeSwitcher = () => {
     return (
         <SwitcherWrapper>
             <Text>Switch Theme</Text>
-            <Select value={actualTheme} onChange={changeSelect}>
+            <Select
+                value={actualTheme}
+                onChange={changeSelect}
+                data-cy='theme-switcher'
+            >
                 <option value='dark'>Dark Theme</option>
                 <option value='light'>Light Theme</option>
             </Select>

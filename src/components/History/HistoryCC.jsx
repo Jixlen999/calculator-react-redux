@@ -18,7 +18,7 @@ class HistoryCC extends React.Component {
                 }}
             >
                 <Heading>History</Heading>
-                <ExpressionsWrapper>
+                <ExpressionsWrapper data-cy='history'>
                     {this.props.history.map((expr, index) => {
                         return (
                             <Expression key={`${expr}_${index}`}>

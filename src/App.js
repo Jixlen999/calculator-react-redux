@@ -19,7 +19,7 @@ function App() {
     return (
         <ThemeProvider theme={themeValue}>
             <ErrorBoundary>
-                <AppWrapper>
+                <AppWrapper data-cy='app'>
                     <Routes>
                         <Route path='/' element={<Layout />}>
                             <Route index element={<HomeFC />} />
