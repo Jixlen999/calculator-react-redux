@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createGlobalStyle } from 'styled-components';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from '@store/index';
 
@@ -23,11 +23,11 @@ html {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <Router>
             <Provider store={store}>
                 <Global />
                 <App />
             </Provider>
-        </BrowserRouter>
+        </Router>
     </React.StrictMode>,
 );
