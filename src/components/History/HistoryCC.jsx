@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import DeleteHistoryBtn from '@components/DeleteHistoryBtn/DeleteHistoryBtn';
+import DeleteHistoryBtnCC from '@components/DeleteHistoryBtn/DeleteHistoryBtnCC';
 import {
     HistoryWrapper,
     Heading,
@@ -27,7 +27,7 @@ class HistoryCC extends React.Component {
                         );
                     })}
                 </ExpressionsWrapper>
-                <DeleteHistoryBtn />
+                <DeleteHistoryBtnCC />
             </HistoryWrapper>
         );
     }

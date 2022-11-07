@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import DeleteHistoryBtn from '@components/DeleteHistoryBtn/DeleteHistoryBtn';
+import DeleteHistoryBtnFC from '@components/DeleteHistoryBtn/DeleteHistoryBtnFC';
 import {
     HistoryWrapper,
     Heading,
@@ -25,7 +25,7 @@ const HistoryFC = ({ isShown }) => {
                     );
                 })}
             </ExpressionsWrapper>
-            <DeleteHistoryBtn />
+            <DeleteHistoryBtnFC />
         </HistoryWrapper>
     );
 };
