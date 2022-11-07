@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const NavbarWrapper = styled.div`
@@ -8,11 +8,15 @@ export const NavbarWrapper = styled.div`
     gap: 20px;
 `;
 
-export const NavLink = styled(Link)`
+export const NavbarLink = styled(NavLink)`
     cursor: pointer;
     text-decoration: none;
     color: ${({ theme }) => theme.navLinkColor};
     &:hover {
+        color: #ececec;
+        border-bottom: 1.5px solid white;
+    }
+    &.active {
         color: #ececec;
         border-bottom: 1.5px solid white;
     }

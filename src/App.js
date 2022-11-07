@@ -23,8 +23,8 @@ function App() {
                     <Routes>
                         <Route path='/' element={<Layout />}>
                             <Route index element={<HomeFC />} />
-                            <Route path='/home-cc' element={<HomeCC />} />
-                            <Route path='/settings' element={<Settings />} />
+                            <Route path='home-cc' element={<HomeCC />} />
+                            <Route path='settings' element={<Settings />} />
                             <Route path='*' element={<ErrorPage />} />
                         </Route>
                     </Routes>

@@ -10,7 +10,11 @@ import {
 class HistoryCC extends React.Component {
     render() {
         return (
-            <HistoryWrapper>
+            <HistoryWrapper
+                style={{
+                    display: this.props.isShown ? 'block' : 'none',
+                }}
+            >
                 <Heading>History</Heading>
                 <ExpressionsWrapper>
                     {this.props.history.map((expr, index) => {

@@ -7,10 +7,14 @@ import {
     ExpressionsWrapper,
 } from './HistoryStyles.js';
 
-const HistoryFC = () => {
+const HistoryFC = ({ isShown }) => {
     const history = useSelector((store) => store.history.history);
     return (
-        <HistoryWrapper>
+        <HistoryWrapper
+            style={{
+                display: isShown ? 'block' : 'none',
+            }}
+        >
             <Heading>History</Heading>
             <ExpressionsWrapper>
                 {history.map((expr, index) => {

@@ -1,12 +1,14 @@
 import React from 'react';
-import { NavbarWrapper, NavLink } from './NavbarStyles';
+import { NavbarWrapper, NavbarLink } from './NavbarStyles';
 
 const Navbar = () => {
     return (
         <NavbarWrapper>
-            <NavLink to={'/'}>Home(FC)</NavLink>
-            <NavLink to={'/home-cc'}>Home(CC)</NavLink>
-            <NavLink to='/settings'>Settings</NavLink>
+            <NavbarLink to='/' end>
+                Home(FC)
+            </NavbarLink>
+            <NavbarLink to='/home-cc'>Home(CC)</NavbarLink>
+            <NavbarLink to='/settings'>Settings</NavbarLink>
         </NavbarWrapper>
     );
 };
