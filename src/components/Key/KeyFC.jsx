@@ -12,6 +12,7 @@ const KeyFC = ({ element }) => {
 
     return (
         <KeyWrapper
+            data-cy={`key-${element}`}
             onClick={() => clickHandler(element, dispatch, screenValue, answer)}
         >
             {element}
