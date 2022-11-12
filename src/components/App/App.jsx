@@ -15,16 +15,22 @@ function App() {
   const storeTheme = useSelector((state) => state.theme);
   const themeValue = storeTheme === 'dark' ? theme.DarkTheme : theme.LightTheme;
 
+  const routes = [
+    { path: '/', element: <HomeFC /> },
+    { path: 'home-cc', element: <HomeCC /> },
+    { path: 'settings', element: <Settings /> },
+    { path: '*', element: <ErrorPage /> },
+  ];
+
   return (
     <ThemeProvider theme={themeValue}>
       <ErrorBoundary>
         <AppWrapper data-cy="app">
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<HomeFC />} />
-              <Route path="home-cc" element={<HomeCC />} />
-              <Route path="settings" element={<Settings />} />
-              <Route path="*" element={<ErrorPage />} />
+              {routes.map((route) => (
+                <Route path={route.path} element={route.element} key={route.path} />
+              ))}
             </Route>
           </Routes>
         </AppWrapper>
