@@ -1,4 +1,5 @@
 const DarkTheme = {
+  value: 'dark',
   btnBackground: '#766993',
   headerColor: '#201c25',
   btnBorder: '#573880',
@@ -9,6 +10,7 @@ const DarkTheme = {
 };
 
 const LightTheme = {
+  value: 'light',
   btnBackground: '#FFd7b5',
   headerColor: '#E25817',
   btnBorder: '#FC929B',
