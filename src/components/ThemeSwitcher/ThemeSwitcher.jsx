@@ -10,12 +10,20 @@ function ThemeSwitcher() {
   const changeSelect = (e) => {
     dispatch(changeTheme(e.target.value));
   };
+
+  const options = [
+    { value: 'dark', text: 'Dark Theme' },
+    { value: 'light', text: 'Light Theme' },
+  ];
   return (
     <SwitcherWrapper>
       <Text>Switch Theme</Text>
       <Select value={actualTheme} onChange={changeSelect} data-cy="theme-switcher">
-        <option value="dark">Dark Theme</option>
-        <option value="light">Light Theme</option>
+        {options.map((opt) => (
+          <option value={opt.value} key={opt.value}>
+            {opt.text}
+          </option>
+        ))}
       </Select>
     </SwitcherWrapper>
   );
