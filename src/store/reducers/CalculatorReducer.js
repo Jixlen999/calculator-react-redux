@@ -1,17 +1,13 @@
-import {
-  LOAD_BUTTON,
-  LOAD_ANSWER,
-  LOAD_C,
-  LOAD_CE,
-} from '@constants/ActionsConstants';
+/* eslint-disable default-param-last */
+import { LOAD_BUTTON, LOAD_ANSWER, LOAD_C, LOAD_CE } from '@constants/ActionsConstants';
 
-let initialState = {
+const initialState = {
   num: '',
   answer: '',
   isDividedByZero: false,
 };
 
-export const calculatorReducer = (state = initialState, action) => {
+const calculatorReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_BUTTON:
       return {
@@ -36,3 +32,5 @@ export const calculatorReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default calculatorReducer;

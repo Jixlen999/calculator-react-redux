@@ -1,8 +1,11 @@
+/* eslint-disable default-param-last */
 import { CHANGE_THEME } from '@constants/ActionsConstants';
-export const themeReducer = (state = 'dark', action) => {
+
+const themeReducer = (state = 'dark', action) => {
   if (action.type === CHANGE_THEME) {
     return action.theme;
-  } else {
-    return state;
   }
+  return state;
 };
+
+export default themeReducer;

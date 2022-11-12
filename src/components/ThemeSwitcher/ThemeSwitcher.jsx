@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeTheme } from '@store/actions/ThemeActions';
+import changeTheme from '@store/actions/ThemeActions';
 import { Select, SwitcherWrapper, Text } from './styles';
 
 function ThemeSwitcher() {

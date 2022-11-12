@@ -1,3 +1,4 @@
+/* eslint-disable default-param-last */
 import { ADD_TO_HISTORY, CLEAR_HISTORY } from '@constants/ActionsConstants';
 
 const initialState = {
@@ -5,7 +6,7 @@ const initialState = {
   history: [],
 };
 
-export const historyReducer = (state = initialState, action) => {
+const historyReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_HISTORY:
       return {
@@ -22,3 +23,5 @@ export const historyReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default historyReducer;

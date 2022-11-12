@@ -3,7 +3,7 @@ import DisplayCC from '@components/Display/DisplayCC';
 import KeypadCC from '@components/Keypad/KeypadCC';
 import CalculatorWrapper from './styles';
 
-class CalculatorCC extends React.Component {
+class CalculatorCC extends React.PureComponent {
   render() {
     return (
       <CalculatorWrapper>

@@ -18,7 +18,8 @@ const LightTheme = {
   navLinkColor: '#FFD396',
 };
 
-export const theme = {
+const theme = {
   DarkTheme,
   LightTheme,
 };
+export default theme;

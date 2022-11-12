@@ -8,7 +8,7 @@ import Settings from '@pages/SettingsPage/Settings';
 import ErrorPage from '@pages/ErrorPage/ErrorPage';
 import Layout from '@components/Layout/Layout';
 import ErrorBoundary from '@components/ErrorBoundary/ErrorBoundary';
-import { theme } from '@constants/ThemeConstants';
+import theme from '@constants/ThemeConstants';
 import AppWrapper from './styles';
 
 function App() {
