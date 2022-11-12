@@ -1,14 +1,14 @@
 import React from 'react';
 import Navbar from '@components/Navbar/Navbar';
-import { HeaderWrapper, Logo } from './HeaderStyles';
+import { HeaderWrapper, Logo } from './styles';
 
-const Header = () => {
-    return (
-        <HeaderWrapper>
-            <Logo>Calculator App</Logo>
-            <Navbar />
-        </HeaderWrapper>
-    );
-};
+function Header() {
+  return (
+    <HeaderWrapper>
+      <Logo>Calculator App</Logo>
+      <Navbar />
+    </HeaderWrapper>
+  );
+}
 
 export default Header;

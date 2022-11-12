@@ -1,20 +1,20 @@
 import React from 'react';
-import { NavbarWrapper, NavbarLink } from './NavbarStyles';
+import { NavbarWrapper, NavbarLink } from './styles';
 
-const Navbar = () => {
-    return (
-        <NavbarWrapper>
-            <NavbarLink to='/' data-cy='homeFC' end>
-                Home(FC)
-            </NavbarLink>
-            <NavbarLink to='/home-cc' data-cy='homeCC'>
-                Home(CC)
-            </NavbarLink>
-            <NavbarLink to='/settings' data-cy='settings'>
-                Settings
-            </NavbarLink>
-        </NavbarWrapper>
-    );
-};
+function Navbar() {
+  return (
+    <NavbarWrapper>
+      <NavbarLink to="/" data-cy="homeFC" end>
+        Home(FC)
+      </NavbarLink>
+      <NavbarLink to="/home-cc" data-cy="homeCC">
+        Home(CC)
+      </NavbarLink>
+      <NavbarLink to="/settings" data-cy="settings">
+        Settings
+      </NavbarLink>
+    </NavbarWrapper>
+  );
+}
 
 export default Navbar;

@@ -1,7 +1,23 @@
 {
-    "extends": ["react-app", "react-app/jest"],
-    "plugins": ["prettier"],
-    "rules": {
-        "prettier/prettier": 2
+  "extends": ["airbnb", "airbnb/hooks", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "linebreak-style": ["error", "windows"]
+  },
+  "settings": {
+    "import/resolver": {
+      "eslint-import-resolver-custom-alias": {
+        "alias": {
+          "src": "./src",
+          "@components": "src/components",
+          "@pages": "src/pages",
+          "@constants": "src/constants",
+          "@store": "src/store",
+          "@utils": "src/utils"
+        },
+        "extensions": [".js", ".jsx"],
+        "packages": ["packages/*"]
+      }
     }
+  }
 }

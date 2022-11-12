@@ -5,8 +5,8 @@ import { themeReducer } from './reducers/ThemeReducer';
 import { calculatorReducer } from './reducers/CalculatorReducer';
 
 const rootReducer = combineReducers({
-    theme: themeReducer,
-    history: historyReducer,
-    calculator: calculatorReducer,
+  theme: themeReducer,
+  history: historyReducer,
+  calculator: calculatorReducer,
 });
 export const store = createStore(rootReducer, composeWithDevTools());

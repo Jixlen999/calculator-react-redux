@@ -2,26 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clickHandler from '@utils/keyClickHandler';
 
-import { KeyWrapper } from './KeyStyles';
 import { useDispatch, useSelector } from 'react-redux';
+import KeyWrapper from './styles';
 
-const KeyFC = ({ element }) => {
-    const dispatch = useDispatch();
-    const screenValue = useSelector((state) => state.calculator.num);
-    const answer = useSelector((state) => state.calculator.answer);
+function KeyFC({ element }) {
+  const dispatch = useDispatch();
+  const screenValue = useSelector((state) => state.calculator.num);
+  const answer = useSelector((state) => state.calculator.answer);
 
-    return (
-        <KeyWrapper
-            data-cy={`key-${element}`}
-            onClick={() => clickHandler(element, dispatch, screenValue, answer)}
-        >
-            {element}
-        </KeyWrapper>
-    );
-};
+  const handleClick = () => {
+    clickHandler(element, dispatch, screenValue, answer);
+  };
+
+  return (
+    <KeyWrapper data-cy={`key-${element}`} onClick={handleClick}>
+      {element}
+    </KeyWrapper>
+  );
+}
 
 KeyFC.propTypes = {
-    element: PropTypes.string.isRequired,
+  element: PropTypes.string.isRequired,
 };
 
 export default KeyFC;

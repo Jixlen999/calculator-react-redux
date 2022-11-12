@@ -2,39 +2,33 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import DeleteHistoryBtnCC from '@components/DeleteHistoryBtn/DeleteHistoryBtnCC';
-import {
-    HistoryWrapper,
-    Heading,
-    Expression,
-    ExpressionsWrapper,
-} from './HistoryStyles.js';
+import { HistoryWrapper, Heading, Expression, ExpressionsWrapper } from './styles';
 
-class HistoryCC extends React.Component {
-    render() {
-        return (
-            <HistoryWrapper
-                style={{
-                    display: this.props.isShown ? 'block' : 'none',
-                }}
-            >
-                <Heading>History</Heading>
-                <ExpressionsWrapper data-cy='history'>
-                    {this.props.history.map((expr, index) => {
-                        return (
-                            <Expression key={`${expr}_${index}`}>
-                                {expr}
-                            </Expression>
-                        );
-                    })}
-                </ExpressionsWrapper>
-                <DeleteHistoryBtnCC />
-            </HistoryWrapper>
-        );
-    }
+class HistoryCC extends React.PureComponent {
+  render() {
+    const { isShown, history } = this.props;
+    return (
+      <HistoryWrapper
+        style={{
+          display: isShown ? 'block' : 'none',
+        }}
+      >
+        <Heading>History</Heading>
+        <ExpressionsWrapper data-cy="history">
+          {history.map((expr, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <Expression key={`${expr}_${index}`}>{expr}</Expression>
+          ))}
+        </ExpressionsWrapper>
+        <DeleteHistoryBtnCC />
+      </HistoryWrapper>
+    );
+  }
 }
 
 HistoryCC.propTypes = {
-    isShown: PropTypes.bool.isRequired,
+  isShown: PropTypes.bool.isRequired,
+  history: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 const mapStateToProps = (state) => ({ history: state.history.history });
