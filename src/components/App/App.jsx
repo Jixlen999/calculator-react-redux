@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import Layout from '@components/Layout/Layout';
+import PageElements from '@components/PageElements/PageElements';
 import ErrorBoundary from '@components/ErrorBoundary/ErrorBoundary';
 import routes from '@constants/Routes';
 import useTheme from '@hooks/theme';
@@ -14,7 +14,7 @@ function App() {
       <ErrorBoundary>
         <AppWrapper data-cy="app">
           <Routes>
-            <Route path="/" element={<Layout />}>
+            <Route path="/" element={<PageElements />}>
               {routes.map((route) => (
                 <Route path={route.path} element={route.element} key={route.path} />
               ))}
