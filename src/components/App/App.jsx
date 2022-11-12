@@ -1,18 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { useSelector } from 'react-redux';
-
 import Layout from '@components/Layout/Layout';
 import ErrorBoundary from '@components/ErrorBoundary/ErrorBoundary';
-import theme from '@constants/ThemeConstants';
 import routes from '@constants/Routes';
+import useTheme from '@hooks/theme';
 import AppWrapper from './styles';
 
 function App() {
-  const storeTheme = useSelector((state) => state.theme);
-  const themeValue = storeTheme === 'dark' ? theme.DarkTheme : theme.LightTheme;
-
+  const themeValue = useTheme();
   return (
     <ThemeProvider theme={themeValue}>
       <ErrorBoundary>

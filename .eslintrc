@@ -16,7 +16,8 @@
           "@pages": "src/pages",
           "@constants": "src/constants",
           "@store": "src/store",
-          "@utils": "src/utils"
+          "@utils": "src/utils",
+          "@hooks": "src/hooks"
         },
         "extensions": [".js", ".jsx"],
         "packages": ["packages/*"]
