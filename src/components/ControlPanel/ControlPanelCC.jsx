@@ -1,8 +1,9 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import HistoryCC from '@components/History/HistoryCC';
 import { PanelWrapper, HistoryBtn } from './styles';
 
-class ControlPanelCC extends React.Component {
+class ControlPanelCC extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,11 +11,17 @@ class ControlPanelCC extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setState({ isShown: localStorage.getItem('isShown') !== 'false' });
+  }
+
   render() {
+    const { isShown } = this.state;
+
     const handleClick = () => {
+      localStorage.setItem('isShown', !isShown);
       this.setState((prevState) => ({ isShown: !prevState.isShown }));
     };
-    const { isShown } = this.state;
     return (
       <PanelWrapper isShown={isShown}>
         <HistoryBtn onClick={handleClick} data-cy="open-history">

@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+/* eslint-disable no-undef */
+import React, { useCallback, useEffect, useState } from 'react';
 import HistoryFC from '@components/History/HistoryFC';
 import { PanelWrapper, HistoryBtn } from './styles';
 
 function ControlPanelFC() {
-  const [isShown, seIsShown] = useState(false);
+  const [isShown, setIsShown] = useState(false);
   const handleClick = () => {
-    seIsShown((current) => !current);
+    localStorage.setItem('isShown', !isShown);
+    setIsShown((current) => !current);
   };
+  const storageIsShown = localStorage.getItem('isShown');
+  const checkLocalStorage = useCallback(() => storageIsShown !== 'false', [storageIsShown]);
+  useEffect(() => {
+    setIsShown(checkLocalStorage);
+  }, [setIsShown, checkLocalStorage]);
+
   return (
     <PanelWrapper isShown={isShown}>
       <HistoryBtn onClick={handleClick} data-cy="open-history">
@@ -17,4 +25,4 @@ function ControlPanelFC() {
   );
 }
 
-export default ControlPanelFC;
+export default React.memo(ControlPanelFC);
