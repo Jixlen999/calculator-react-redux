@@ -6,6 +6,7 @@ export const PanelWrapper = styled.div`
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
+  width: ${(props) => (props.isShown ? '20%' : '2rem')};
 `;
 
 export const HistoryBtn = styled.div`

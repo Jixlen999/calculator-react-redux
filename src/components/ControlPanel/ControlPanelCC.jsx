@@ -16,11 +16,7 @@ class ControlPanelCC extends React.Component {
     };
     const { isShown } = this.state;
     return (
-      <PanelWrapper
-        style={{
-          width: isShown ? '20%' : '2rem',
-        }}
-      >
+      <PanelWrapper isShown={isShown}>
         <HistoryBtn onClick={handleClick} data-cy="open-history">
           {isShown ? <i className="fa-solid fa-chevron-right" /> : <i className="fa-solid fa-chevron-left" />}
         </HistoryBtn>
