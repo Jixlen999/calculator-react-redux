@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { DisplayWrapper, DisplayText, ExpressionText } from './styles';
 
@@ -6,7 +6,7 @@ function DisplayFC() {
   const screenValue = useSelector((state) => state.calculator.num);
   const calcResult = useSelector((state) => state.calculator.answer);
   const lastExpression = useSelector((store) => store.history.lastExpression);
-  const scrValue = screenValue === '' ? 0 : screenValue;
+  const scrValue = useMemo(() => (screenValue === '' ? 0 : screenValue), [screenValue]);
   return (
     <DisplayWrapper>
       <ExpressionText>
@@ -21,4 +21,4 @@ function DisplayFC() {
   );
 }
 
-export default DisplayFC;
+export default React.memo(DisplayFC);

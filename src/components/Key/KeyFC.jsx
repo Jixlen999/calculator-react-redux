@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import clickHandler from '@utils/keyClickHandler';
 
@@ -10,9 +10,9 @@ function KeyFC({ element }) {
   const screenValue = useSelector((state) => state.calculator.num);
   const answer = useSelector((state) => state.calculator.answer);
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     clickHandler(element, dispatch, screenValue, answer);
-  };
+  }, [element, dispatch, screenValue, answer]);
 
   return (
     <KeyWrapper data-cy={`key-${element}`} onClick={handleClick}>
@@ -25,4 +25,4 @@ KeyFC.propTypes = {
   element: PropTypes.string.isRequired,
 };
 
-export default KeyFC;
+export default React.memo(KeyFC);

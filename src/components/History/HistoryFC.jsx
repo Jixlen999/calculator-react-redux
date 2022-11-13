@@ -24,4 +24,4 @@ HistoryFC.propTypes = {
   isShown: PropTypes.bool.isRequired,
 };
 
-export default HistoryFC;
+export default React.memo(HistoryFC);

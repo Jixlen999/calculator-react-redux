@@ -23,4 +23,4 @@ function KeypadFC() {
   );
 }
 
-export default KeypadFC;
+export default React.memo(KeypadFC);
