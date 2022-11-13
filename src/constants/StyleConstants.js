@@ -12,3 +12,5 @@ export const HEADER_FONT_WEIGHT = '400';
 export const HISTORY_HEADING_SIZE = '26px';
 export const HISTORY_EXPRESSION_SIZE = '24px';
 export const SETTINGS_HEADER_SIZE = '40px';
+export const APP_WIDTH = '100vw';
+export const APP_HEIGHT = '100vh';

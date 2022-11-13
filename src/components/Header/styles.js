@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { HEADER_FONT_SIZE, LOGO_FONT_SIZE, HEADER_FONT_WEIGHT } from '@constants/StyleConstants';
+import { HEADER_COLOR } from '@constants/Theme';
 
 export const HeaderWrapper = styled.div`
   height: 10%;
   width: 100%;
   padding: 15px;
-  background-color: ${({ theme }) => theme.headerColor};
+  background-color: ${HEADER_COLOR};
   display: flex;
   justify-content: space-between;
   align-items: center;

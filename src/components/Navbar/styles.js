@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { NAVLINK_COLOR } from '@constants/Theme';
 
 export const NavbarWrapper = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ export const NavbarWrapper = styled.div`
 export const NavbarLink = styled(NavLink)`
   cursor: pointer;
   text-decoration: none;
-  color: ${({ theme }) => theme.navLinkColor};
+  color: ${NAVLINK_COLOR};
   &:hover,
   &.active {
     color: #ececec;

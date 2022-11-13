@@ -6,6 +6,7 @@ import {
   BORDER_SIZE_STYLE,
   SETTINGS_BTN_HEIGHT,
 } from '@constants/StyleConstants';
+import { BTN_BG_COLOR, MAIN_TEXT_COLOR, BTN_BORDER } from '@constants/Theme';
 
 export const SwitcherWrapper = styled.div`
   margin-bottom: 20px;
@@ -14,16 +15,16 @@ export const SwitcherWrapper = styled.div`
 export const Select = styled.select`
   width: ${SETTINGS_BTN_WIDTH};
   height: ${SETTINGS_BTN_HEIGHT};
-  background-color: ${({ theme }) => theme.btnBackground};
-  color: ${({ theme }) => theme.mainTextColor};
+  background-color: ${BTN_BG_COLOR};
+  color: ${MAIN_TEXT_COLOR};
   text-align: center;
   font-size: ${BTN_FONT_SIZE};
   border-radius: ${BTN_BORDER_RADIUS};
-  border: ${BORDER_SIZE_STYLE} ${({ theme }) => theme.btnBorder};
+  border: ${BORDER_SIZE_STYLE} ${BTN_BORDER};
   cursor: pointer;
 `;
 
 export const Text = styled.p`
-  color: ${({ theme }) => theme.mainTextColor};
+  color: ${MAIN_TEXT_COLOR};
   font-size: 20px;
 `;
