@@ -1,10 +1,20 @@
 {
   "files": {
-    "main.js": "/calculator-react-redux/static/js/main.1180c311.js",
+    "main.js": "/calculator-react-redux/static/js/main.72ad15ea.js",
+    "static/js/147.d39a48bc.chunk.js": "/calculator-react-redux/static/js/147.d39a48bc.chunk.js",
+    "static/js/153.35578b0b.chunk.js": "/calculator-react-redux/static/js/153.35578b0b.chunk.js",
+    "static/js/909.cadba37c.chunk.js": "/calculator-react-redux/static/js/909.cadba37c.chunk.js",
+    "static/js/627.18382e4c.chunk.js": "/calculator-react-redux/static/js/627.18382e4c.chunk.js",
+    "static/js/191.417c9532.chunk.js": "/calculator-react-redux/static/js/191.417c9532.chunk.js",
     "index.html": "/calculator-react-redux/index.html",
-    "main.1180c311.js.map": "/calculator-react-redux/static/js/main.1180c311.js.map"
+    "main.72ad15ea.js.map": "/calculator-react-redux/static/js/main.72ad15ea.js.map",
+    "147.d39a48bc.chunk.js.map": "/calculator-react-redux/static/js/147.d39a48bc.chunk.js.map",
+    "153.35578b0b.chunk.js.map": "/calculator-react-redux/static/js/153.35578b0b.chunk.js.map",
+    "909.cadba37c.chunk.js.map": "/calculator-react-redux/static/js/909.cadba37c.chunk.js.map",
+    "627.18382e4c.chunk.js.map": "/calculator-react-redux/static/js/627.18382e4c.chunk.js.map",
+    "191.417c9532.chunk.js.map": "/calculator-react-redux/static/js/191.417c9532.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1180c311.js"
+    "static/js/main.72ad15ea.js"
   ]
 }
