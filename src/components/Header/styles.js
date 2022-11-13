@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { HEADER_FONT_SIZE, LOGO_FONT_SIZE, HEADER_FONT_WEIGHT } from '@constants/StyleConstants';
 
 export const HeaderWrapper = styled.div`
   height: 10%;
@@ -8,12 +9,12 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: ${HEADER_FONT_SIZE};
+  font-weight: ${HEADER_FONT_WEIGHT};
 `;
 
 export const Logo = styled.h1`
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: ${LOGO_FONT_SIZE};
+  font-weight: ${HEADER_FONT_WEIGHT};
   color: #ececec;
 `;

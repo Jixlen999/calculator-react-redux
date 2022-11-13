@@ -1,12 +1,19 @@
 import styled from 'styled-components';
+import {
+  SETTINGS_BTN_WIDTH,
+  SETTINGS_BTN_HEIGHT,
+  BORDER_SIZE_STYLE,
+  BTN_BORDER_RADIUS,
+  BTN_FONT_SIZE,
+} from '@constants/StyleConstants';
 
 const DeleteBtn = styled.div`
-  width: 10em;
-  height: 50px;
+  width: ${SETTINGS_BTN_WIDTH};
+  height: ${SETTINGS_BTN_HEIGHT};
   text-align: center;
-  font-size: 2rem;
-  border-radius: 5px;
-  border: 2px solid ${({ theme }) => theme.btnBorder};
+  font-size: ${BTN_FONT_SIZE};
+  border-radius: ${BTN_BORDER_RADIUS};
+  border: ${BORDER_SIZE_STYLE} ${({ theme }) => theme.btnBorder};
   cursor: pointer;
   background-color: ${({ theme }) => theme.btnBackground};
   &:hover {

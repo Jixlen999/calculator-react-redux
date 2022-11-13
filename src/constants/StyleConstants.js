@@ -1,0 +1,14 @@
+export const SETTINGS_BTN_WIDTH = '300px';
+export const SETTINGS_BTN_HEIGHT = '50px';
+export const BTN_FONT_SIZE = '36px';
+export const ARROW_BTN_HOVER_FONT = '40px';
+export const BTN_BORDER_RADIUS = '5px';
+export const DISPLAY_FONT_SIZE = '36px';
+export const DISPLAY_EXPRESSION_SIZE = '18px';
+export const BORDER_SIZE_STYLE = '2px solid';
+export const HEADER_FONT_SIZE = '24px';
+export const LOGO_FONT_SIZE = '26px';
+export const HEADER_FONT_WEIGHT = '400';
+export const HISTORY_HEADING_SIZE = '26px';
+export const HISTORY_EXPRESSION_SIZE = '24px';
+export const SETTINGS_HEADER_SIZE = '40px';

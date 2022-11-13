@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SETTINGS_HEADER_SIZE } from '@constants/StyleConstants';
 
 export const PanelWrapper = styled.div`
   padding: 20px;
@@ -6,5 +7,5 @@ export const PanelWrapper = styled.div`
 
 export const Heading = styled.h2`
   margin: 20px 0;
-  font-size: 2.5rem;
+  font-size: ${SETTINGS_HEADER_SIZE};
 `;

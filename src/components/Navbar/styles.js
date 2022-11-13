@@ -12,10 +12,7 @@ export const NavbarLink = styled(NavLink)`
   cursor: pointer;
   text-decoration: none;
   color: ${({ theme }) => theme.navLinkColor};
-  &:hover {
-    color: #ececec;
-    border-bottom: 1.5px solid white;
-  }
+  &:hover,
   &.active {
     color: #ececec;
     border-bottom: 1.5px solid white;
