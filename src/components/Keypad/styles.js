@@ -1,13 +1,14 @@
 import styled from 'styled-components';
+import { HUNDRED_PERCENT_WIDTH, KEYPAD_WRAPPER_PADDING } from '@constants/StyleConstants';
 
 export const KeypadWrapper = styled.div`
-  width: 100%;
+  width: ${HUNDRED_PERCENT_WIDTH};
   height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px 0px 30px;
+  padding: ${KEYPAD_WRAPPER_PADDING};
 `;
 
 export const Key = styled.div`

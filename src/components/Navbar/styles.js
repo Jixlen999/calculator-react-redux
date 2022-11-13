@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { NAVLINK_COLOR } from '@constants/Theme';
+import { NAVLINK_BORDER_HOVER_ACTIVE, NAVLINK_COLOR_HOVER_ACTIVE } from '@constants/StyleConstants';
 
 export const NavbarWrapper = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ export const NavbarLink = styled(NavLink)`
   color: ${NAVLINK_COLOR};
   &:hover,
   &.active {
-    color: #ececec;
-    border-bottom: 1.5px solid white;
+    color: ${NAVLINK_COLOR_HOVER_ACTIVE};
+    border-bottom: ${NAVLINK_BORDER_HOVER_ACTIVE};
   }
 `;

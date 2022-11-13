@@ -5,11 +5,12 @@ import {
   BTN_BORDER_RADIUS,
   BORDER_SIZE_STYLE,
   SETTINGS_BTN_HEIGHT,
+  TWENTY_PX_MARGIN,
 } from '@constants/StyleConstants';
 import { BTN_BG_COLOR, MAIN_TEXT_COLOR, BTN_BORDER } from '@constants/Theme';
 
 export const SwitcherWrapper = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: ${TWENTY_PX_MARGIN};
 `;
 
 export const Select = styled.select`
