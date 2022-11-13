@@ -4,6 +4,7 @@ import { HISTORY_HEADING_SIZE, HISTORY_EXPRESSION_SIZE } from '@constants/StyleC
 export const HistoryWrapper = styled.div`
   width: 100%;
   text-align: center;
+  visibility: ${(props) => (props.isShown ? 'visible' : 'hidden')};
 `;
 
 export const Heading = styled.h2`

@@ -1,39 +1,24 @@
 import React from 'react';
 import KeyFC from '@components/Key/KeyFC';
 import { keys6, keys } from '@constants/KeysConstants';
-import KeypadWrapper from './styles';
+import { KeypadWrapper, Key } from './styles';
 
 function KeypadFC() {
   return (
     <KeypadWrapper>
       {keys.map((element) => (
-        <div
-          style={{
-            display: 'flex',
-            gap: '10%',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-          key={element}
-        >
+        <Key key={element}>
           {element.map((key) => (
             <KeyFC key={key} element={key} />
           ))}
-        </div>
+        </Key>
       ))}
 
-      <div
-        style={{
-          display: 'flex',
-          gap: '10%',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
+      <Key>
         {keys6.map((element) => (
           <KeyFC key={element} element={element} />
         ))}
-      </div>
+      </Key>
     </KeypadWrapper>
   );
 }

@@ -7,11 +7,7 @@ import { HistoryWrapper, Heading, Expression, ExpressionsWrapper } from './style
 function HistoryFC({ isShown }) {
   const history = useSelector((store) => store.history.history);
   return (
-    <HistoryWrapper
-      style={{
-        visibility: isShown ? 'visible' : 'hidden',
-      }}
-    >
+    <HistoryWrapper isShown={isShown}>
       <Heading>History</Heading>
       <ExpressionsWrapper data-cy="history">
         {history.map((expr, index) => (

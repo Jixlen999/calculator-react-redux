@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const KeypadWrapper = styled.div`
+export const KeypadWrapper = styled.div`
   width: 100%;
   height: 85%;
   display: flex;
@@ -10,4 +10,9 @@ const KeypadWrapper = styled.div`
   padding: 20px 30px 0px 30px;
 `;
 
-export default KeypadWrapper;
+export const Key = styled.div`
+  display: flex;
+  gap: 10%;
+  justify-content: space-between;
+  align-items: center;
+`;

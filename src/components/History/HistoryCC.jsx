@@ -8,11 +8,7 @@ class HistoryCC extends React.PureComponent {
   render() {
     const { isShown, history } = this.props;
     return (
-      <HistoryWrapper
-        style={{
-          display: isShown ? 'block' : 'none',
-        }}
-      >
+      <HistoryWrapper isShown={isShown}>
         <Heading>History</Heading>
         <ExpressionsWrapper data-cy="history">
           {history.map((expr, index) => (
