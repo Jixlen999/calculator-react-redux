@@ -1,10 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearHistory } from '@store/actions/CalculatorActions';
 import PropTypes from 'prop-types';
-import DeleteHistoryBtnFC from '@components/DeleteHistoryBtn/DeleteHistoryBtnFC';
+import ClearButton from '@components/ClearButton';
+
 import { HistoryWrapper, Heading, Expression, ExpressionsWrapper } from './styles';
 
 function HistoryFC({ isShown }) {
+  const dispatch = useDispatch();
+  const clickHandler = () => {
+    dispatch(clearHistory());
+  };
+
   const history = useSelector((store) => store.history.history);
   return (
     <HistoryWrapper isShown={isShown}>
@@ -14,7 +21,9 @@ function HistoryFC({ isShown }) {
           <Expression key={`${expr}_${index}`}>{expr}</Expression>
         ))}
       </ExpressionsWrapper>
-      <DeleteHistoryBtnFC />
+      <ClearButton clickHandler={clickHandler} dataCy="delete-history">
+        Clear
+      </ClearButton>
     </HistoryWrapper>
   );
 }

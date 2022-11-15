@@ -1,15 +1,9 @@
 import styled from 'styled-components';
-import {
-  SETTINGS_BTN_WIDTH,
-  SETTINGS_BTN_HEIGHT,
-  BORDER_SIZE_STYLE,
-  BTN_BORDER_RADIUS,
-  BTN_FONT_SIZE,
-} from '@constants/StyleConstants';
+import { SETTINGS_BTN_HEIGHT, BORDER_SIZE_STYLE, BTN_BORDER_RADIUS, BTN_FONT_SIZE } from '@constants/StyleConstants';
 import { BTN_BORDER, BTN_BG_COLOR, BTN_BG_COLOR_HOVER } from '@constants/Theme';
 
 const DeleteBtn = styled.div`
-  width: ${SETTINGS_BTN_WIDTH};
+  width: ${(props) => props.width};
   height: ${SETTINGS_BTN_HEIGHT};
   text-align: center;
   font-size: ${BTN_FONT_SIZE};

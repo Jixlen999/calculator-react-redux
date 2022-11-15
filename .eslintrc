@@ -5,7 +5,8 @@
     "ecmaVersion": 2020
   },
   "globals": {
-    "localStorage": true
+    "localStorage": true,
+    "document": true
   },
   "rules": {
     "linebreak-style": ["error", "windows"],

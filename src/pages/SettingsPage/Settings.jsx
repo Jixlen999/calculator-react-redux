@@ -1,5 +1,5 @@
 import React from 'react';
-import ControlPanel from '@components/Settings/Settings';
+import ControlPanel from '@components/Settings';
 
 function Settings() {
   return <ControlPanel />;

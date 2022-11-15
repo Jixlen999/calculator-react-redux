@@ -1,14 +1,23 @@
 import React from 'react';
-import ThemeSwitcher from '@components/ThemeSwitcher/ThemeSwitcher';
-import ClearAllBtn from '@components/ClearAllBtn/ClearAllBtn';
+import { useDispatch } from 'react-redux';
+import { clearHistory, loadC } from '@store/actions/CalculatorActions';
+import ThemeSwitcher from '@components/ThemeSwitcher';
+import ClearButton from '@components/ClearButton';
 import { PanelWrapper, Heading } from './styles';
 
 function ControlPanel() {
+  const dispatch = useDispatch();
+  const clickHandler = () => {
+    dispatch(clearHistory());
+    dispatch(loadC());
+  };
   return (
     <PanelWrapper>
       <Heading>Settings</Heading>
       <ThemeSwitcher />
-      <ClearAllBtn />
+      <ClearButton clickHandler={clickHandler} dataCy="clear-all" width="300px">
+        Clear All
+      </ClearButton>
     </PanelWrapper>
   );
 }
