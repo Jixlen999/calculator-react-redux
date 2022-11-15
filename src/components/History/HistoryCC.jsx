@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import DeleteHistoryBtnCC from '@components/DeleteHistoryBtn/DeleteHistoryBtnCC';
+import ClearButtonCC from '@components/ClearButton/ClearButtonCC';
 import { HistoryWrapper, Heading, Expression, ExpressionsWrapper } from './styles';
 
 class HistoryCC extends React.PureComponent {
@@ -15,7 +15,7 @@ class HistoryCC extends React.PureComponent {
             <Expression key={`${expr}_${index}`}>{expr}</Expression>
           ))}
         </ExpressionsWrapper>
-        <DeleteHistoryBtnCC />
+        <ClearButtonCC />
       </HistoryWrapper>
     );
   }

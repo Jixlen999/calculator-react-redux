@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DeleteBtn from './styles';
 
-function ClearButton({ clickHandler, dataCy, children, width }) {
+function ClearButtonFC({ clickHandler, dataCy, children, width }) {
   return (
     <DeleteBtn onClick={clickHandler} data-cy={dataCy} width={width}>
       {children}
@@ -10,14 +10,14 @@ function ClearButton({ clickHandler, dataCy, children, width }) {
   );
 }
 
-ClearButton.propTypes = {
+ClearButtonFC.propTypes = {
   clickHandler: PropTypes.func.isRequired,
   dataCy: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   width: PropTypes.string,
 };
-ClearButton.defaultProps = {
+ClearButtonFC.defaultProps = {
   width: 'auto',
 };
 
-export default ClearButton;
+export default ClearButtonFC;

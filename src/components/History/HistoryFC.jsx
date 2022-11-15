@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearHistory } from '@store/actions/CalculatorActions';
 import PropTypes from 'prop-types';
-import ClearButton from '@components/ClearButton';
+import ClearButton from '@components/ClearButton/ClearButtonFC';
 
 import { HistoryWrapper, Heading, Expression, ExpressionsWrapper } from './styles';
 

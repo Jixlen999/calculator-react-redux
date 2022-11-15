@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { clearHistory } from '@store/actions/CalculatorActions';
 import DeleteBtn from './styles';
 
-class DeleteHistoryBtn extends React.PureComponent {
+class ClearButtonCC extends React.PureComponent {
   render() {
     const { dispatch } = this.props;
     const clickHandler = () => {
@@ -18,8 +18,8 @@ class DeleteHistoryBtn extends React.PureComponent {
   }
 }
 
-DeleteHistoryBtn.propTypes = {
+ClearButtonCC.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
-export default connect()(DeleteHistoryBtn);
+export default connect()(ClearButtonCC);

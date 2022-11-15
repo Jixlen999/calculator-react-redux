@@ -20,7 +20,7 @@
     "import/resolver": {
       "eslint-import-resolver-custom-alias": {
         "alias": {
-          "src": "./src",
+          "@src": "./src",
           "@components": "src/components",
           "@pages": "src/pages",
           "@constants": "src/constants",
