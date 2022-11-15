@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import HistoryFC from '@components/History/HistoryFC';
 import { PanelWrapper, HistoryBtn } from './styles';
 
@@ -17,7 +18,7 @@ function ControlPanelFC() {
   return (
     <PanelWrapper isShown={isShown}>
       <HistoryBtn onClick={handleClick} data-cy="open-history">
-        {isShown ? <i className="fa-solid fa-chevron-right" /> : <i className="fa-solid fa-chevron-left" />}
+        {isShown ? <SlArrowRight /> : <SlArrowLeft />}
       </HistoryBtn>
       <HistoryFC isShown={isShown} />
     </PanelWrapper>

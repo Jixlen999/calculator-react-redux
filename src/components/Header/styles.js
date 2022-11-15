@@ -10,7 +10,7 @@ import {
 import { HEADER_COLOR } from '@constants/Theme';
 
 export const HeaderWrapper = styled.div`
-  height: ${HEADER_HEIGHT};
+  height: 10vh;
   width: ${HUNDRED_PERCENT_WIDTH};
   padding: ${FIFTEEN_PX_PADDING};
   background-color: ${HEADER_COLOR};

@@ -4,7 +4,7 @@ import { APP_BG_COLOR, MAIN_TEXT_COLOR } from '@constants/Theme';
 
 const AppWrap = styled.div`
   width: ${APP_WIDTH};
-  height: ${APP_HEIGHT};
+  height: 90vh;
   display: flex;
   flex-direction: column;
   background-color: ${APP_BG_COLOR};
