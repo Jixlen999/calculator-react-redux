@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-lonely-if */
 import { loadButton, loadCE, loadC, loadAnswer, addToHistory } from '@store/actions/CalculatorActions';
 import calculateExpression from './calculationFunc';
 import normalizeExpression from './normalizeFunc';

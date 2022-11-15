@@ -1,4 +1,3 @@
-/* eslint-disable no-lonely-if */
 function add(x, y) {
   return x + y;
 }

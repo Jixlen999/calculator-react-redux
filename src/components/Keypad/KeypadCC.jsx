@@ -3,7 +3,7 @@ import KeyCC from '@components/Key/KeyCC';
 import { keys6, keys } from '@constants/KeysConstants';
 import { KeypadWrapper, Key } from './styles';
 
-class KeypadFC extends React.PureComponent {
+class KeypadFC extends React.Component {
   render() {
     return (
       <KeypadWrapper>

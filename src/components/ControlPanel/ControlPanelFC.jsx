@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React, { useCallback, useEffect, useState } from 'react';
 import HistoryFC from '@components/History/HistoryFC';
 import { PanelWrapper, HistoryBtn } from './styles';

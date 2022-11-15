@@ -4,8 +4,16 @@
   "parserOptions": {
     "ecmaVersion": 2020
   },
+  "globals": {
+    "localStorage": true
+  },
   "rules": {
-    "linebreak-style": ["error", "windows"]
+    "linebreak-style": ["error", "windows"],
+    "react/prefer-stateless-function": "off",
+    "react/no-array-index-key": "off",
+    "default-param-last": "off",
+    "no-param-reassign": "off",
+    "no-lonely-if": "off"
   },
   "settings": {
     "import/resolver": {

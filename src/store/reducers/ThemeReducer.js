@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable default-param-last */
 import { CHANGE_THEME } from '@constants/ActionsConstants';
 
 const themeReducer = (state = localStorage.getItem('theme'), action) => {

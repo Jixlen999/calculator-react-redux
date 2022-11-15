@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import HistoryCC from '@components/History/HistoryCC';
 import { PanelWrapper, HistoryBtn } from './styles';

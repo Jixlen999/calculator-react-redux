@@ -11,7 +11,6 @@ function HistoryFC({ isShown }) {
       <Heading>History</Heading>
       <ExpressionsWrapper data-cy="history">
         {history.map((expr, index) => (
-          // eslint-disable-next-line react/no-array-index-key
           <Expression key={`${expr}_${index}`}>{expr}</Expression>
         ))}
       </ExpressionsWrapper>

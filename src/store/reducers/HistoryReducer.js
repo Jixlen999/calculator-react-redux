@@ -1,4 +1,3 @@
-/* eslint-disable default-param-last */
 import { ADD_TO_HISTORY, CLEAR_HISTORY } from '@constants/ActionsConstants';
 
 const initialState = {
