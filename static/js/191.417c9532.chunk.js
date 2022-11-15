@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcalculator_react_redux=self.webpackChunkcalculator_react_redux||[]).push([[191],{2191:function(n,e,t){t.r(e),t.d(e,{default:function(){return i}});t(2791);var r,u=t(168),a=t(6444),c=t(8501),l=a.ZP.h1(r||(r=(0,u.Z)(["\n  padding: 30px;\n  font-size: ",";\n  text-align: center;\n"])),c.WJ),d=t(184);var i=function(){return(0,d.jsx)(l,{children:"Page Not Found"})}}}]);
-//# sourceMappingURL=191.417c9532.chunk.js.map
