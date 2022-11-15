@@ -12,7 +12,7 @@ root.render(
     <Router>
       <Provider store={store}>
         <Global />
-        <App data-cy="app" />
+        <App />
       </Provider>
     </Router>
   </React.StrictMode>,

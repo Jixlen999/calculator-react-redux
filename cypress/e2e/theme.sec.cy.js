@@ -4,9 +4,9 @@ describe('Visit the site, change pages', () => {
     cy.visit('/');
     cy.get('[data-cy="settings"]').click();
     cy.url().should('include', '/settings');
-    cy.get('[data-cy="theme-switcher"]').select('dark');
-    cy.get('[data-cy="app"]').should('have.css', 'background-color', 'rgb(62, 54, 73)');
     cy.get('[data-cy="theme-switcher"]').select('light');
     cy.get('[data-cy="app"]').should('have.css', 'background-color', 'rgb(252, 247, 246)');
+    cy.get('[data-cy="theme-switcher"]').select('dark');
+    cy.get('[data-cy="app"]').should('have.css', 'background-color', 'rgb(62, 54, 73)');
   });
 });

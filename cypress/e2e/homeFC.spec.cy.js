@@ -262,6 +262,7 @@ describe('Testing history', () => {
     cy.get('[data-cy="key-="]').click();
   });
   it('Check and clear history', () => {
+    cy.get('[data-cy="open-history"]').click();
     cy.get('[data-cy="history"]').should('not.be.empty');
     cy.get('[data-cy="delete-history"]').click();
     cy.get('[data-cy="history"]').should('be.empty');
