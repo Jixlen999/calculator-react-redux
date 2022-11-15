@@ -1,17 +1,11 @@
 import styled from 'styled-components';
-import {
-  BORDER_SIZE_STYLE,
-  CALCULATOR_BORDER_COLOR,
-  HUNDRED_PERCENT_WIDTH,
-  HUNDRED_PERCENT_HEIGHT,
-  FIFTEEN_PX_PADDING,
-} from '@constants/StyleConstants';
+import theme from '@src/theme';
 
 const CalculatorWrapper = styled.div`
-  padding-right: ${FIFTEEN_PX_PADDING};
-  height: ${HUNDRED_PERCENT_HEIGHT};
-  width: ${HUNDRED_PERCENT_WIDTH};
-  border-right: ${BORDER_SIZE_STYLE} ${CALCULATOR_BORDER_COLOR};
+  padding-right: ${theme.padding[1]}px;
+  height: ${theme.height[6]}%;
+  width: ${theme.width[3]}%;
+  border-right: ${theme.borderSize}px solid ${theme.borderColor};
 `;
 
 export default CalculatorWrapper;

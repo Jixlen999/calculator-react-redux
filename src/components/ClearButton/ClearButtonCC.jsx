@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { clearHistory } from '@store/actions/CalculatorActions';
 import DeleteBtn from './styles';
 
-class ClearButtonCC extends React.PureComponent {
+class ClearButtonCC extends React.Component {
   render() {
     const { dispatch } = this.props;
     const clickHandler = () => {

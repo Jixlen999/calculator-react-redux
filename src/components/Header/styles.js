@@ -1,28 +1,20 @@
 import styled from 'styled-components';
-import {
-  HEADER_FONT_SIZE,
-  FIFTEEN_PX_PADDING,
-  HUNDRED_PERCENT_WIDTH,
-  LOGO_FONT_SIZE,
-  HEADER_FONT_WEIGHT,
-  HEADER_HEIGHT,
-} from '@constants/StyleConstants';
-import { HEADER_COLOR } from '@constants/Theme';
+import theme from '@src/theme';
 
 export const HeaderWrapper = styled.div`
-  height: 10vh;
-  width: ${HUNDRED_PERCENT_WIDTH};
-  padding: ${FIFTEEN_PX_PADDING};
-  background-color: ${HEADER_COLOR};
+  height: ${theme.height[0]}vh;
+  width: ${theme.width[3]}%;
+  padding: ${theme.padding[1]}px;
+  background-color: ${theme.HEADER_COLOR};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: ${HEADER_FONT_SIZE};
-  font-weight: ${HEADER_FONT_WEIGHT};
+  font-size: ${theme.fontSize[3]}px;
+  font-weight: ${theme.fontWeight[0]};
 `;
 
 export const Logo = styled.h1`
-  font-size: ${LOGO_FONT_SIZE};
-  font-weight: ${HEADER_FONT_WEIGHT};
-  color: #ececec;
+  font-size: ${theme.fontSize[3]}px;
+  font-weight: ${theme.fontWeight[0]};
+  color: ${theme.navlinkColorHoverActive};
 `;

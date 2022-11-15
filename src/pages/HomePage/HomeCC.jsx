@@ -3,7 +3,7 @@ import CalculatorCC from '@components/Calculator/CalculatorCC';
 import ControlPanelCC from '@components/ControlPanel/ControlPanelCC';
 import HomeWrapper from './styles';
 
-class HomeCC extends React.PureComponent {
+class HomeCC extends React.Component {
   render() {
     return (
       <HomeWrapper>

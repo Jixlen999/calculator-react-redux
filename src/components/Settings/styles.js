@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { SETTINGS_HEADER_SIZE, TWENTY_PX_MARGIN } from '@constants/StyleConstants';
+import theme from '@src/theme';
 
 export const PanelWrapper = styled.div`
-  padding: 20px;
+  padding: ${theme.padding[2]}px;
 `;
 
 export const Heading = styled.h2`
-  margin: ${TWENTY_PX_MARGIN} 0;
-  font-size: ${SETTINGS_HEADER_SIZE};
+  margin: ${theme.margin[2]}px 0;
+  font-size: ${theme.fontSize[5]}px;
 `;

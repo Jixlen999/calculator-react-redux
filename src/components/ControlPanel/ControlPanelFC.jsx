@@ -25,4 +25,4 @@ function ControlPanelFC() {
   );
 }
 
-export default React.memo(ControlPanelFC);
+export default ControlPanelFC;

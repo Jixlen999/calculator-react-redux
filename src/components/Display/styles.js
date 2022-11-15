@@ -1,22 +1,16 @@
 import styled from 'styled-components';
-import {
-  DISPLAY_FONT_SIZE,
-  FIFTEEN_PX_PADDING,
-  DISPLAY_EXPRESSION_SIZE,
-  BORDER_SIZE_STYLE,
-  CALCULATOR_BORDER_COLOR,
-} from '@constants/StyleConstants';
+import theme from '@src/theme';
 
 export const DisplayWrapper = styled.div`
-  min-height: 15%;
-  padding: ${FIFTEEN_PX_PADDING};
+  min-height: ${theme.height[1]}%;
+  padding: ${theme.padding[1]}px;
   text-align: right;
-  border-bottom: ${BORDER_SIZE_STYLE} ${CALCULATOR_BORDER_COLOR};
+  border-bottom: ${theme.borderSize[1]}px solid ${theme.borderColor};
 `;
 export const DisplayText = styled.p`
-  font-size: ${DISPLAY_FONT_SIZE};
-  font-weight: 500;
+  font-size: ${theme.fontSize[4]}px;
+  font-weight: ${theme.fontWeight[1]};
 `;
 export const ExpressionText = styled.p`
-  font-size: ${DISPLAY_EXPRESSION_SIZE};
+  font-size: ${theme.fontSize[0]}px;
 `;

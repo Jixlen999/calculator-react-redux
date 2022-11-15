@@ -1,23 +1,23 @@
 import styled from 'styled-components';
-import { BTN_FONT_SIZE, ARROW_BTN_HOVER_FONT } from '@constants/StyleConstants';
+import theme from '@src/theme';
 
 export const PanelWrapper = styled.div`
-  padding-right: 15px;
-  height: 100%;
+  padding-right: ${theme.padding[1]}px;
+  height: ${theme.height[6]}%;
   display: flex;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: all ${theme.transition[0]}s ease;
   width: ${(props) => (props.isShown ? '20%' : '2%')};
 `;
 
 export const HistoryBtn = styled.div`
-  margin-left: 5px;
-  font-size: ${BTN_FONT_SIZE};
+  margin-left: ${theme.margin[1]}px;
+  font-size: ${theme.fontSize[4]}px;
   display: inline-block;
-  width: ${ARROW_BTN_HOVER_FONT};
+  width: ${theme.fontSize[5]}px;
   cursor: pointer;
   &:hover {
-    font-size: ${ARROW_BTN_HOVER_FONT};
+    font-size: ${theme.fontSize[5]}px;
   }
-  transition: all 0.3s ease;
+  transition: all ${theme.transition[0]}s ease;
 `;

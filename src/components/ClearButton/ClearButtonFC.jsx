@@ -20,4 +20,4 @@ ClearButtonFC.defaultProps = {
   width: 'auto',
 };
 
-export default ClearButtonFC;
+export default React.memo(ClearButtonFC);

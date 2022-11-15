@@ -3,7 +3,7 @@ import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import HistoryCC from '@components/History/HistoryCC';
 import { PanelWrapper, HistoryBtn } from './styles';
 
-class ControlPanelCC extends React.PureComponent {
+class ControlPanelCC extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

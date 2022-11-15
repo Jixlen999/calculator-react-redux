@@ -16,7 +16,7 @@ function ControlPanel() {
     <PanelWrapper>
       <Heading>Settings</Heading>
       <ThemeSwitcher />
-      <ClearButton clickHandler={clickHandler} dataCy="clear-all" width={`${theme.width[0]}px`}>
+      <ClearButton clickHandler={clickHandler} dataCy="clear-all" width={`${theme.width[4]}px`}>
         Clear All
       </ClearButton>
     </PanelWrapper>

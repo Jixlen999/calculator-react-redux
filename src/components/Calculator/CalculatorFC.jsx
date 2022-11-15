@@ -12,4 +12,4 @@ function CalculatorFC() {
   );
 }
 
-export default React.memo(CalculatorFC);
+export default CalculatorFC;
