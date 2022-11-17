@@ -9,14 +9,11 @@ export default function normalizeExpression(expr) {
       (Number.isNaN(+trimmedExpr[i - 1]) || i === 0) &&
       !Number.isNaN(+trimmedExpr[i + 1])
     ) {
-      console.log(`trim: ${trimmedExpr}`);
       i += 1;
       normExpr.push(`-${trimmedExpr[i]}`);
-      console.log(normExpr);
     } else {
       normExpr.push(trimmedExpr[i]);
     }
   }
-  console.log(normExpr);
   return normExpr;
 }
