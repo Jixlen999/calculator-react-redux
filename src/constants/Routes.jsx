@@ -2,8 +2,8 @@ import React from 'react';
 
 const HomeFC = React.lazy(() => import('@pages/HomePage/HomeFC'));
 const HomeCC = React.lazy(() => import('@pages/HomePage/HomeCC'));
-const Settings = React.lazy(() => import('@pages/SettingsPage/Settings'));
-const ErrorPage = React.lazy(() => import('@pages/ErrorPage/ErrorPage'));
+const Settings = React.lazy(() => import('@pages/SettingsPage'));
+const ErrorPage = React.lazy(() => import('@pages/ErrorPage'));
 
 const routes = [
   { path: '/', element: <HomeFC /> },
