@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/calculator-react-redux/static/js/main.428a789b.js",
-    "static/js/931.baaee0e8.chunk.js": "/calculator-react-redux/static/js/931.baaee0e8.chunk.js",
-    "static/js/410.6bf4faa5.chunk.js": "/calculator-react-redux/static/js/410.6bf4faa5.chunk.js",
-    "static/js/594.649b08d6.chunk.js": "/calculator-react-redux/static/js/594.649b08d6.chunk.js",
-    "static/js/191.4678dc94.chunk.js": "/calculator-react-redux/static/js/191.4678dc94.chunk.js",
+    "main.js": "/calculator-react-redux/static/js/main.9b1b4b66.js",
+    "static/js/931.7d6625b4.chunk.js": "/calculator-react-redux/static/js/931.7d6625b4.chunk.js",
+    "static/js/410.b16a035b.chunk.js": "/calculator-react-redux/static/js/410.b16a035b.chunk.js",
+    "static/js/583.63f4c679.chunk.js": "/calculator-react-redux/static/js/583.63f4c679.chunk.js",
+    "static/js/992.f9cbd811.chunk.js": "/calculator-react-redux/static/js/992.f9cbd811.chunk.js",
     "static/js/721.b3c427e3.chunk.js": "/calculator-react-redux/static/js/721.b3c427e3.chunk.js",
     "index.html": "/calculator-react-redux/index.html",
-    "main.428a789b.js.map": "/calculator-react-redux/static/js/main.428a789b.js.map",
-    "931.baaee0e8.chunk.js.map": "/calculator-react-redux/static/js/931.baaee0e8.chunk.js.map",
-    "410.6bf4faa5.chunk.js.map": "/calculator-react-redux/static/js/410.6bf4faa5.chunk.js.map",
-    "594.649b08d6.chunk.js.map": "/calculator-react-redux/static/js/594.649b08d6.chunk.js.map",
-    "191.4678dc94.chunk.js.map": "/calculator-react-redux/static/js/191.4678dc94.chunk.js.map",
+    "main.9b1b4b66.js.map": "/calculator-react-redux/static/js/main.9b1b4b66.js.map",
+    "931.7d6625b4.chunk.js.map": "/calculator-react-redux/static/js/931.7d6625b4.chunk.js.map",
+    "410.b16a035b.chunk.js.map": "/calculator-react-redux/static/js/410.b16a035b.chunk.js.map",
+    "583.63f4c679.chunk.js.map": "/calculator-react-redux/static/js/583.63f4c679.chunk.js.map",
+    "992.f9cbd811.chunk.js.map": "/calculator-react-redux/static/js/992.f9cbd811.chunk.js.map",
     "721.b3c427e3.chunk.js.map": "/calculator-react-redux/static/js/721.b3c427e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.428a789b.js"
+    "static/js/main.9b1b4b66.js"
   ]
 }
