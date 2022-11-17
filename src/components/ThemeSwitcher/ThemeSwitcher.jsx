@@ -17,11 +17,14 @@ function ThemeSwitcher() {
     <SwitcherWrapper>
       <Text>Switch Theme</Text>
       <Select value={actualTheme} onChange={changeSelect} data-cy="theme-switcher">
-        {options.map((opt) => (
-          <option value={opt.value} key={opt.value}>
-            {opt.text}
-          </option>
-        ))}
+        {options.map((opt) => {
+          const { value, text } = opt;
+          return (
+            <option value={value} key={value}>
+              {text}
+            </option>
+          );
+        })}
       </Select>
     </SwitcherWrapper>
   );

@@ -3,8 +3,9 @@ import theme from '@constants/ThemeConstants';
 
 function useTheme() {
   const storeTheme = useSelector((state) => state.theme);
+  const { DarkTheme, LightTheme } = theme;
 
-  const currentTheme = storeTheme === 'dark' ? theme.DarkTheme : theme.LightTheme;
+  const currentTheme = storeTheme === 'dark' ? DarkTheme : LightTheme;
   localStorage.setItem('theme', storeTheme === 'dark' ? 'dark' : 'light');
   return currentTheme;
 }
