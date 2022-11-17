@@ -1,10 +1,10 @@
-const APP_BG_COLOR = ({ theme }) => theme.mainBackground;
-const MAIN_TEXT_COLOR = ({ theme }) => theme.mainTextColor;
-const BTN_BORDER = ({ theme }) => theme.btnBorder;
-const BTN_BG_COLOR = ({ theme }) => theme.btnBackground;
-const BTN_BG_COLOR_HOVER = ({ theme }) => theme.btnHover;
-const HEADER_COLOR = ({ theme }) => theme.headerColor;
-const NAVLINK_COLOR = ({ theme }) => theme.navLinkColor;
+const appBgColor = ({ theme }) => theme.mainBackground;
+const mainTextColor = ({ theme }) => theme.mainTextColor;
+const btnBorder = ({ theme }) => theme.btnBorder;
+const btnBgColor = ({ theme }) => theme.btnBackground;
+const btnBgColorHover = ({ theme }) => theme.btnHover;
+const headerColor = ({ theme }) => theme.headerColor;
+const navLinkColor = ({ theme }) => theme.navLinkColor;
 
 const borderColor = '#717171';
 const navlinkColorHoverActive = '#ececec';
@@ -26,11 +26,11 @@ export default {
   navlinkColorHoverActive,
   white,
 
-  APP_BG_COLOR,
-  MAIN_TEXT_COLOR,
-  BTN_BORDER,
-  BTN_BG_COLOR,
-  BTN_BG_COLOR_HOVER,
-  HEADER_COLOR,
-  NAVLINK_COLOR,
+  appBgColor,
+  mainTextColor,
+  btnBorder,
+  btnBgColor,
+  btnBgColorHover,
+  headerColor,
+  navLinkColor,
 };

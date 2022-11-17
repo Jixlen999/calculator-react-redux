@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 import theme from '@src/theme';
 
+const { width, height, padding, gap } = theme;
+
 export const KeypadWrapper = styled.div`
-  width: ${theme.width[3]}%;
-  height: ${theme.height[4]}%;
+  width: ${width[3]}%;
+  height: ${height[4]}%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: ${theme.padding[2]}px ${theme.padding[3]}px 0px ${theme.padding[3]}px;
+  padding: ${padding[2]}px ${padding[3]}px 0px ${padding[3]}px;
 `;
 
 export const Key = styled.div`
   display: flex;
-  gap: ${theme.gap[0]}%;
+  gap: ${gap[0]}%;
   justify-content: space-between;
   align-items: center;
 `;

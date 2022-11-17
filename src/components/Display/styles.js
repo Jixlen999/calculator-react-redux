@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 import theme from '@src/theme';
 
+const { height, padding, borderSize, borderColor, fontSize, fontWeight } = theme;
+
 export const DisplayWrapper = styled.div`
-  min-height: ${theme.height[1]}%;
-  padding: ${theme.padding[1]}px;
+  min-height: ${height[1]}%;
+  padding: ${padding[1]}px;
   text-align: right;
-  border-bottom: ${theme.borderSize[1]}px solid ${theme.borderColor};
+  border-bottom: ${borderSize[1]}px solid ${borderColor};
 `;
 export const DisplayText = styled.p`
-  font-size: ${theme.fontSize[4]}px;
-  font-weight: ${theme.fontWeight[1]};
+  font-size: ${fontSize[4]}px;
+  font-weight: ${fontWeight[1]};
 `;
 export const ExpressionText = styled.p`
-  font-size: ${theme.fontSize[0]}px;
+  font-size: ${fontSize[0]}px;
 `;
