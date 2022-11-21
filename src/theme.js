@@ -41,12 +41,4 @@ export default {
     navLinkColor: '#FFD396',
     ...mutualStyles,
   },
-
-  // appBgColor,
-  // mainTextColor,
-  // btnBorder,
-  // btnBgColor,
-  // btnBgColorHover,
-  // headerColor,
-  // navLinkColor,
 };
