@@ -1,35 +1,21 @@
 import styled from 'styled-components';
-import theme from '@src/theme';
-
-const {
-  width,
-  height,
-  fontSize,
-  fontWeight,
-  borderRadius,
-  borderSize,
-  btnBgColor,
-  btnBorder,
-  mainTextColor,
-  btnBgColorHover,
-} = theme;
 
 const KeyWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${width[1]}vw;
-  height: ${height[0]}vh;
-  font-size: ${fontSize[4]}px;
-  color: ${mainTextColor};
+  width: ${({ theme }) => theme.width[1]}vw;
+  height: ${({ theme }) => theme.height[0]}vh;
+  font-size: ${({ theme }) => theme.fontSize[4]}px;
+  color: ${({ theme }) => theme.mainTextColor};
   text-align: center;
-  font-weight: ${fontWeight[1]};
-  border-radius: ${borderRadius[0]}px;
-  border: ${borderSize[1]}px solid ${btnBorder};
-  background-color: ${btnBgColor};
+  font-weight: ${({ theme }) => theme.fontWeight[1]};
+  border-radius: ${({ theme }) => theme.borderRadius[0]}px;
+  border: ${({ theme }) => theme.borderSize[1]}px solid ${({ theme }) => theme.btnBorder};
+  background-color: ${({ theme }) => theme.btnBackground};
   cursor: pointer;
   &:hover {
-    background-color: ${btnBgColorHover};
+    background-color: ${({ theme }) => theme.btnHover};
   }
 `;
 

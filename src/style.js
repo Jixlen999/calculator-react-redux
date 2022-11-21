@@ -1,7 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import theme from './theme';
-
-const { fontWeight, fontSize } = theme;
 
 const Global = createGlobalStyle`
 * {
@@ -9,10 +6,10 @@ const Global = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    font-weight: ${fontWeight[0]};
+    font-weight: 400;
 }
 html {
-    font-size: ${fontSize[0]}px;
+    font-size: 18px;
 }
 `;
 

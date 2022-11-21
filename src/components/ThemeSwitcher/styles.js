@@ -1,25 +1,22 @@
 import styled from 'styled-components';
-import theme from '@src/theme';
-
-const { margin, width, height, fontSize, borderRadius, borderSize, btnBgColor, mainTextColor, btnBorder } = theme;
 
 export const SwitcherWrapper = styled.div`
-  margin-bottom: ${margin[2]}px;
+  margin-bottom: ${({ theme }) => theme.margin[2]}px;
 `;
 
 export const Select = styled.select`
-  width: ${width[4]}px;
-  height: ${height[2]}px;
-  background-color: ${btnBgColor};
-  color: ${mainTextColor};
+  width: ${({ theme }) => theme.width[4]}px;
+  height: ${({ theme }) => theme.height[2]}px;
+  background-color: ${({ theme }) => theme.btnBackground};
+  color: ${({ theme }) => theme.mainTextColor};
   text-align: center;
-  font-size: ${fontSize[4]}px;
-  border-radius: ${borderRadius[0]}px;
-  border: ${borderSize[1]}px solid ${btnBorder};
+  font-size: ${({ theme }) => theme.fontSize[4]}px;
+  border-radius: ${({ theme }) => theme.borderRadius[0]}px;
+  border: ${({ theme }) => theme.borderSize[1]}px solid ${({ theme }) => theme.btnBorder};
   cursor: pointer;
 `;
 
 export const Text = styled.p`
-  color: ${mainTextColor};
-  font-size: ${fontSize[1]};
+  color: ${({ theme }) => theme.mainTextColor};
+  font-size: ${({ theme }) => theme.fontSize[1]};
 `;

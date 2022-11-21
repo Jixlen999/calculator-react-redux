@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import theme from '@constants/ThemeConstants';
+import theme from '@src/theme';
 
 function useTheme() {
   const storeTheme = useSelector((state) => state.theme);
