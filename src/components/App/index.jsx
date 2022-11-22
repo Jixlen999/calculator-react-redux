@@ -16,10 +16,9 @@ function App() {
         <Layout>
           <Suspense fallback={<h1>Loading...</h1>}>
             <Routes>
-              {routes.map((route) => {
-                const { path, element } = route;
-                return <Route path={path} element={element} key={path} />;
-              })}
+              {routes.map(({ path, element }) => (
+                <Route path={path} element={element} key={path} />
+              ))}
             </Routes>
           </Suspense>
         </Layout>

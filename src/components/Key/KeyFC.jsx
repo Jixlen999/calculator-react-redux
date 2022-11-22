@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import clickHandler from '@utils/keyClickHandler';
-
 import { useDispatch, useSelector } from 'react-redux';
 import KeyWrapper from './styles';
 
