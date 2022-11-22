@@ -5,14 +5,11 @@ import { NavbarWrapper, NavbarLink } from './styles';
 function Navbar() {
   return (
     <NavbarWrapper>
-      {links.map((link) => {
-        const { text, to, dataCy, end } = link;
-        return (
-          <NavbarLink key={text} to={to} data-cy={dataCy} end={end || ''}>
-            {text}
-          </NavbarLink>
-        );
-      })}
+      {links.map(({ text, to, dataCy, end }) => (
+        <NavbarLink key={text} to={to} data-cy={dataCy} end={end || ''}>
+          {text}
+        </NavbarLink>
+      ))}
     </NavbarWrapper>
   );
 }

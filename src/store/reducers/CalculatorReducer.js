@@ -1,4 +1,3 @@
-/* eslint-disable default-param-last */
 import { LOAD_BUTTON, LOAD_ANSWER, LOAD_C, LOAD_CE } from '@constants/ActionsConstants';
 
 const initialState = {
